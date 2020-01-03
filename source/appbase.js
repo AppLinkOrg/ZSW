@@ -281,7 +281,7 @@ export class AppBase {
     var memberapi = new MemberApi();
     var that = this;
     memberapi.info({}, (info) => {
-      if (info.mobile == "" && this.Base.needauth == true) {
+      if ((info==null||info.mobile == "") && this.Base.needauth == true) {
         wx.navigateTo({
           url: '/pages/auth/auth',
         })

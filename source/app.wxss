@@ -1,9 +1,14 @@
 /**app.wxss**/
 @import "wxParse/wxParse.wxss";
-
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
 page{
   background: white;
 }
+::-webkit-scrollbar {
+	display: none;
+}
+
 .clear-contact{
   position: absolute;  
   opacity: 0;
@@ -41,6 +46,14 @@ view,navigator,input,text,textarea{
   font-weight: 350;
   color: #5a5a5a;
 }
+
+  view, navigator, input, text, textarea wxss {
+  font-size: 32rpx;
+  font-weight: 350;
+ 
+  font-family: PingFangSC-Regular;
+}
+
 .flex-row{
   display: flex;
 }
