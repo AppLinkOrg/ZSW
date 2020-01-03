@@ -1,13 +1,13 @@
 export class ApiConfig {
 
   static GetApiUrl() {
-    return "https://cmsdev.app-link.org/alucard263096/dds/api/";
+    return "https://cmsdev.app-link.org/alucard263096/zhaoshuiwan/api/";
   }
   static GetUploadPath() {
-    return "https://alioss.app-link.org/alucard263096/dds/";
+    return "https://alioss.app-link.org/alucard263096/zhaoshuiwan/";
   }
   static GetFileUploadAPI() {
-    return "https://cmsdev.app-link.org/alucard263096/dds/fileupload";
+    return "https://cmsdev.app-link.org/alucard263096/zhaoshuiwan/fileupload";
   }
 
   static GetHeader() {

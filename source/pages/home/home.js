@@ -12,8 +12,14 @@ class Content extends AppBase {
     //options.id=5;
     super.onLoad(options);
   }
+
   onMyShow() {
     var that = this;
+    var instapi = new InstApi();
+
+    instapi.city({}, (indexbanner) => {
+      this.Base.setMyData({ indexbanner });
+    });
   }
 }
 var content = new Content();

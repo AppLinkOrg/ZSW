@@ -1,7 +1,9 @@
 {
   "pages":[
+    "pages/fenlei/fenlei",
     "pages/home/home",
     "pages/auth/auth"
+    
   ],
    "permission": {
     "scope.userLocation": {
@@ -13,5 +15,27 @@
     "enablePullDownRefresh": true,
     "navigationBarBackgroundColor": "white",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#4C556E",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+ 
+  "list":[
+    {
+    "text":"首页",
+    "pagePath": "pages/fenlei/fenlei",
+    "iconPath": "images/icons/d.png",
+    "selectedIconPath": "images/icons/d-d.png"
+    },
+    {
+      "text": "我的",
+      "pagePath": "pages/home/home",
+      "iconPath": "images/icons/c.png",
+      "selectedIconPath": "images/icons/c-c.png"
+    }
+  ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

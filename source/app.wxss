@@ -182,8 +182,14 @@ overflow:hidden;               /* 内容超出宽度时隐藏超出部分的内�
 .f-32{
   font-size: 32rpx !important;
 }
+.f-30{
+  font-size: 30rpx !important;
+}
 .f-36{
   font-size: 36rpx !important;
+}
+.f-26{
+  font-size: 26rpx !important;
 }
 .text-underline{
   text-decoration: underline;
@@ -412,6 +418,9 @@ button[disabled][type=primary] {
 .radius-5{
   border-radius: 5%;
 }
+.radius-10{
+  border-radius: 20rpx;
+}
 .icon-10{
   width: 20rpx;
   height: 20rpx;
@@ -425,8 +434,8 @@ button[disabled][type=primary] {
   height: 35rpx;
 }
 .icon{
-  width: 40rpx;
-  height: 40rpx;
+  width: 44rpx;
+  height: 44rpx;
 }
 .icon-25{
   width: 50rpx;
@@ -455,6 +464,10 @@ button[disabled][type=primary] {
 .icon-100{
   width: 200rpx;
   height: 200rpx;
+}
+.icon-200{
+  width: 250rpx;
+  height: 250rpx;
 }
 .border-raidus-50{
   border-radius: 50%;

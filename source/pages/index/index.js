@@ -12,6 +12,7 @@ class Content extends AppBase {
     //options.id=5;
     super.onLoad(options);
   }
+  
   onMyShow() {
     var that = this;
   }
