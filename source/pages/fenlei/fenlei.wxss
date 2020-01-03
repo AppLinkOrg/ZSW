@@ -7,53 +7,10 @@
 .padd{
   padding: 23rpx 34rpx 19rpx 16rpx;
 }
-<<<<<<< HEAD
-
-.tab-h {
-height: 100rpx;
-width: 100%;
-box-sizing: border-box;
-overflow: hidden;
-line-height: 100rpx;
-/* background: #f7f7f7; */
-font-size: 16px;
-white-space: nowrap;
-border-bottom: 2rpx solid #ccc;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 99;
-}
-
-.tab-item {
-margin: 0 36rpx;
-display: inline-block;
-font-size: 30rpx;
-}
-
-.tab-item.active {
-color: black;
-position: relative;
-font-weight: bold;
-font-size: 36rpx;
-}
-
-.tab-item.active:after {
-content: "";
-display: block;
-height: 8rpx;
-width: 100rpx;
-background: black;
-position: absolute;
-bottom: 0;
-left: 17rpx;
-border-radius: 16rpx;
-=======
 .margin{
   margin:14rpx 27rpx 14rpx 19rpx;
 }
 .asd{
   width: 25rpx;
   height: 29rpx;
->>>>>>> 9bbff6e309023705f751fa67fef127395cb7f35e
 }
