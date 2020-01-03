@@ -12,12 +12,14 @@ class Content extends AppBase {
     this.Base.Page = this;
     //options.id=5;
     super.onLoad(options);
+    this.Base.setMyData({
+      StatusBar: getApp().globalData.StatusBar,
+      CustomBar: getApp().globalData.CustomBar,
+      Custom: getApp().globalData.Custom,
+     
+    })
   }
-  setPageTitle() {
-    wx.setNavigationBarTitle({
-      title: '找谁玩',
-    });
-  }
+
   onMyShow() {
     var that = this;
     var instapi = new InstApi();

@@ -12,13 +12,15 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.5.0",
+	"libVersion": "2.9.4",
 	"appid": "wxff23e3e96e8aa21a",
 	"projectname": "%E6%89%BE%E8%B0%81%E7%8E%A9",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -39,13 +41,13 @@
 		"miniprogram": {
 			"current": 0,
 			"list": [
-       {
-            "id": -1,
-            "name": "我的",
-            "pathName": "pages/mine/mine",
-            "query": "",
-            "scene": null
-          },
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
 				{
 					"id": -1,
 					"name": "授权",

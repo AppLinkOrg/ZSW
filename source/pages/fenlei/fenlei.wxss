@@ -1,9 +1,16 @@
 /* pages/fenlei/fenlei.wxss */
+.fixed{
 
+  position: absolute;
+}
 
 .padd{
   padding: 23rpx 34rpx 19rpx 16rpx;
 }
 .margin{
   margin:14rpx 27rpx 14rpx 19rpx;
+}
+.asd{
+  width: 25rpx;
+  height: 29rpx;
 }

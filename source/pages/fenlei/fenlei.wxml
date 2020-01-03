@@ -1,3 +1,14 @@
+
+<view class='cu-custom'>
+	<view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+		<view class='action' open-type="navigateBack" delta="1" hover-class="none">
+    <image class="asd" src="{{uploadpath}}resource/{{res.asd}}"></image>
+			<text  style="color:black;margin-left:8rpx">北京</text>
+		</view> 
+		<view class='content' style='top:{{StatusBar}}px;color:black'>房产详情</view>
+	</view>
+</view>
+<view style="height:{{CustomBar}}px;"></view>
 <!-- <view class=' flex-row flex-center margin-top-20'>
   <view class='flex-row flex-center' style=''>
         <view class='flex-1 flex-row flex-column' bindtap='clickbtn' >
@@ -73,3 +84,6 @@
     </view>
  </view>
 </view>
+
+<view style="height:100rpx"></view>
+<custom-tab-bar></custom-tab-bar>
