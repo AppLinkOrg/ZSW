@@ -1,0 +1,75 @@
+<!-- <view class=' flex-row flex-center margin-top-20'>
+  <view class='flex-row flex-center' style=''>
+        <view class='flex-1 flex-row flex-column' bindtap='clickbtn' >
+          <view class=' flex-1 h5 padding-10 margin-bottom-5  txt-black txt-bold 'id="false">城市</view>
+          <view  class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+          <view class='flex-row flex-center'>
+          <view  class='margin-top-5 padding-5' wx:for="{{city}}" wx:key='index' wx:if='{{show==false}}' id='true'>{{item.name}}</view>
+          </view>
+          <view  class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+        </view>
+        </view> -->
+
+<!-- <view class='flex-row flex-center padding-20'>
+  <view class='flex-1'></view>
+  <input style='width:95%' class='radius-10 lan' bindinput='lxfs'></input>
+  <view class='flex-1'></view>
+</view> -->
+
+<view class=' flex-row flex-center margin-top-20'>
+  <view class='flex-row flex-center' style=''>
+    <view class='flex-1 flex-row flex-column margin'>
+      <view class='  flex-1 f-36 margin-bottom-5  txt-black txt-bold'>推荐</view>
+      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+    </view>
+
+    <view class='flex-1 flex-row flex-column margin'>
+      <view class='  flex-1 f-30  margin-bottom-5  txt-gray'>美食</view>
+      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+    </view>
+
+    <view class='flex-1 flex-row flex-column margin'>
+      <view class='  flex-1 f-30 margin-bottom-5  txt-gray '>活动</view>
+      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+    </view>
+
+    <view class='flex-1 flex-row flex-column margin'>
+      <view class='  flex-1 f-30  margin-bottom-5  txt-gray '>景点</view>
+      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+    </view>
+
+    <view class='flex-1 flex-row flex-column margin'>
+      <view class='  flex-1 f-30 padding-10 margin-bottom-5  txt-gray '>攻略</view>
+      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+    </view>
+
+    <view class='flex-1 flex-row flex-column margin'>
+      <view class='  flex-1 f-30 padding-10 margin-bottom-5  txt-gray '>酒店</view>
+      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
+      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
+    </view>
+  </view>
+</view>
+
+<!-- <view style='height:2rpx;border-bottom:1rpx solid #ccc'></view> -->
+
+
+<view class='flex-row flex-center flex-wrap bg-gray'>
+  <view wx:for='{{video}}' wx:key='video' class='margin-10 bg-white radius-10' style='width:350rpx'>
+  <view class=''>
+    <image src='{{uploadpath}}video/{{item.tupian}}'class=''style='width:100%;'></image>
+        <view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>
+    </view>
+    <view class='flex-row flex-center padd'>
+    <image src='{{uploadpath}}video/{{item.touxiang}}' class='icon'></image>
+    <view class='h6 margin-left-10'>{{item.name}}</view>
+    <view class='flex-1'></view>
+    <view class='h6 '>{{item.fenxiang}}播放</view>
+    </view>
+ </view>
+</view>

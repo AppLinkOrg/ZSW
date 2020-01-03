@@ -1,0 +1,9 @@
+/* pages/fenlei/fenlei.wxss */
+
+
+.padd{
+  padding: 23rpx 34rpx 19rpx 16rpx;
+}
+.margin{
+  margin:14rpx 27rpx 14rpx 19rpx;
+}
