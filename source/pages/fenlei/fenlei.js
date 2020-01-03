@@ -27,9 +27,15 @@ class Content extends AppBase {
     memberapi.city({  }, (city) => {
       this.Base.setMyData({ city })
     })
-    
+
     memberapi.video({}, (video) => {
       this.Base.setMyData({ video })
+    })
+    instapi.fenlei({}, (fenlei) => {
+      fenlei.unshift({
+        id:0,name:'推荐'
+      })
+      this.Base.setMyData({ fenlei,seq:0 })
     })
      
      instapi.info({},(info)=>{
