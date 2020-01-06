@@ -14,9 +14,9 @@
       <view class=' margin-top-60'>
         <checkbox-group bindchange="checkboxChange">
         <view class='flex-row'>
-       <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo"class='clear-button'> <checkbox></checkbox>获得你的公开信息（昵称、头像等）</button></view>
+       <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo"class='clear-button'> <checkbox value='wx'></checkbox>获得你的公开信息（昵称、头像等）</button></view>
 <view class='flex-row margin-top-30'>
-        <button value='mobile' class='txt-gray f-30 ' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo"class='clear-button'><checkbox></checkbox>  获得您微信绑定的手机号码</button></view>
+        <button value='mobile' class='txt-gray f-30 ' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo"class='clear-button'><checkbox value='mobile' ></checkbox>  获得您微信绑定的手机号码</button></view>
 
         </checkbox-group>
         <!-- 

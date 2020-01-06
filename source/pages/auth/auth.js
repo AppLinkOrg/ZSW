@@ -68,7 +68,7 @@ class Content extends AppBase {
     }
    
     if (AppBase.UserInfo.mobile != '' && AppBase.UserInfo.nickName != ''){
-      wx.redirectTo({
+      wx.navigateTo({
         url: '/pages/shipin/shipin?id='+this.Base.options.id,
       })
     }

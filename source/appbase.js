@@ -308,13 +308,7 @@ export class AppBase {
                     console.log("member update");
                     console.log(ret);
                   });
-                  // console.log(that.Base.options.id,'that.Base.options.id')
-          // wx.navigateTo({
-          //         url: '/pages/shipin/shipin?id=' + that.Base.options.id,
-          //       });
-                  // wx.redirectTo({
-                  //   url: '/pages/shipin/shipin?id=' +  that.Base.options.id,
-                  // })
+                  
                   console.log(AppBase.UserInfo);
                   that.Base.setMyData({
                     UserInfo: AppBase.UserInfo

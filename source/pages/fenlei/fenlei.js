@@ -133,8 +133,9 @@ class Content extends AppBase {
     console.log(e)
  }
   dian(e){
+    console.log(e)
     wx.navigateTo({
-      url: '/pages/auth/auth?id='+e.currentTarget.id,
+      url: '/pages/auth/auth?id=' + e.currentTarget.id,
     })
   }
 
