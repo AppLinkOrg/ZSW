@@ -12,21 +12,27 @@
     <view class='f-36 txt-bold txt-black'>该程序将获取以下授权：</view>
     <view class='margin-top-10 flex-row flex-column'>
       <view class=' margin-top-60'>
-        <!-- <checkbox-group bindchange="checkboxChange"> -->
-          <button value='wx'  open-type="getUserInfo" bindgetuserinfo="getUserInfo">获得你的公开信息（昵称、头像等）</button>
-         <button value='mobile' class='txt-gray f-30 margin-top-30' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" >获得您微信绑定的手机号码</button>
+        <checkbox-group bindchange="checkboxChange">
+        <view class='flex-row'>
+       <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo"class='clear-button'> <checkbox></checkbox>获得你的公开信息（昵称、头像等）</button></view>
+<view class='flex-row margin-top-30'>
+        <button value='mobile' class='txt-gray f-30 ' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo"class='clear-button'><checkbox></checkbox>  获得您微信绑定的手机号码</button></view>
 
-        <!-- </checkbox-group> -->
-        <!-- <selectable-group generic:selectable="custom-checkbox" disabled="{{false}}"  style='border:1rpx solid #ccc'/>
-    <view class='txt-gray f-30 '>获得你的公开信息（昵称、头像等）</view> -->
+        </checkbox-group>
+        <!-- 
+          <checkbox-group bindchange="checkboxChange" class='margin-top-10'>
+         <checkbox value='mobile' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo"></checkbox>获得您微信绑定的手机号码 -->
+        <!-- <checkbox value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='color:white'></checkbox>获得你的公开信息（昵称、头像等） -->
+        <!-- </checkbox-group>  -->
+
       </view>
 
 
     </view>
     <view style='height:222rpx'></view>
     <view class='margin-top' bindtap="detail">
-      <button  class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx'>立即开启</button>
-       <!-- <button wx:if='{{aa=="mobile"}}' class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo">立即开启</button> -->
+      <button class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx'>立即开启</button>
+      <!-- <button wx:if='{{aa=="mobile"}}' class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo">立即开启</button> -->
     </view>
   </view>
 </view>

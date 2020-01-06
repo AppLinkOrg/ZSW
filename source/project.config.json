@@ -13,14 +13,12 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
-	"appid": "wxa8ade57d624f86c4",
+	"appid": "wxfffd6d41411c4224",
 	"projectname": "%E6%89%BE%E8%B0%81%E7%8E%A9",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -35,15 +33,10 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": -1,
 			"list": [
 				{
 					"id": -1,
@@ -68,13 +61,9 @@
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
 					"name": "我的",
 					"pathName": "pages/home/home",
-=======
-					"name": "pages/auth/auth",
-					"pathName": "pages/auth/auth",
->>>>>>> f8e5a2212ffa24e99cb22a4b4a64dbb9c6a1ef44
+					"query": "",
 					"scene": null
 				}
 			]

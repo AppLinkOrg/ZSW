@@ -33,6 +33,7 @@ class Content extends AppBase {
   }
 
   checkboxChange(e) {
+    console.log(e.detail.value)
     console.log(e);
     console.log(e.detail.value)
     var xuanze = e.detail.value;
