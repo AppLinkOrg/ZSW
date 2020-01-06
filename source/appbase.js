@@ -418,6 +418,7 @@ export class AppBase {
     console.log(e.detail);
     api.decrypteddata(e.detail, (ret) => {
       console.log(ret);
+      AppBase.UserInfo.mobile = ret.return.phoneNumber;
       // wx.redirectTo({
       //   url: '/pages/shipin/shipin?id=' + that.Base.options.id,
       // })

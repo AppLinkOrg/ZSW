@@ -51,7 +51,27 @@ class Content extends AppBase {
 
   detail(){
     console.log(AppBase.UserInfo);
-    console.log()
+  
+    if (AppBase.UserInfo.nickName == undefined) {
+      wx.showToast({
+        title: '请进行微信授权',
+        icon: 'none'
+      })
+      return
+    }
+    if (AppBase.UserInfo.mobile==undefined){
+      wx.showToast({
+        title: '请绑定手机号码',
+        icon:'none'
+      })
+      return
+    }
+   
+    if (AppBase.UserInfo.mobile != '' && AppBase.UserInfo.nickName != ''){
+      wx.redirectTo({
+        url: '/pages/shipin/shipin?id='+this.Base.options.id,
+      })
+    }
   }
 
 }
