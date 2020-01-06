@@ -8,3 +8,7 @@ page{
   background-color:#bbbbbb;
   border-radius: 50%;
 }
+.icon-154 {
+  width: 308rpx;
+  height: 308rpx;
+}

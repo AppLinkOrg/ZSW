@@ -1,9 +1,15 @@
 <!--index.wxml-->
+
 <view style='height:100vh' class='bg-gray'>
-  <view style='margin-top:160rpx;' class='text-center'>
-    <image src='{{uploadpath}}inst/{{instinfo.logo}}' style='width:400rpx;' mode='widthFix'></image>
+  
+  <view class='flex-row flex-column '>
+  <view style="height:218rpx;"></view>
+    <image src='{{uploadpath}}inst/{{instinfo.logo}}' class='icon-154'></image>
+    <view style='color:rgba(0,0,0,1);font-size:68rpx;'>找谁玩</view>
+      <view style='width:84%;height:2rpx;background:rgba(236,236,236,1);'></view>
   </view>
-  <view class='margin-top-97' style='height:0.5rpx;border:1rpx solid #ccc'></view>
+ 
+
 
   <view class='padding-40'>
     <view class='border-bottom'></view>
@@ -13,10 +19,14 @@
     <view class='margin-top-10 flex-row flex-column'>
       <view class=' margin-top-60'>
         <checkbox-group bindchange="checkboxChange">
-        <view class='flex-row'>
-       <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo"class='clear-button'> <checkbox value='wx'></checkbox>获得你的公开信息（昵称、头像等）</button></view>
-<view class='flex-row margin-top-30'>
-        <button value='mobile' class='txt-gray f-30 ' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo"class='clear-button'><checkbox value='mobile' ></checkbox>  获得您微信绑定的手机号码</button></view>
+          <view class='flex-row'>
+            <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='clear-button'>
+              <checkbox value='wx'></checkbox>获得你的公开信息（昵称、头像等）</button>
+          </view>
+          <view class='flex-row margin-top-30'>
+            <button value='mobile' class='txt-gray f-30 ' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" class='clear-button'>
+              <checkbox value='mobile'></checkbox> 获得您微信绑定的手机号码</button>
+          </view>
 
         </checkbox-group>
         <!-- 

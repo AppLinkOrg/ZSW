@@ -22,7 +22,7 @@ class Content extends AppBase {
   }
   setPageTitle() {
     wx.setNavigationBarTitle({
-      title: '牛牛消毒',
+      title: '找谁玩',
     });
   }
   onMyShow() {
