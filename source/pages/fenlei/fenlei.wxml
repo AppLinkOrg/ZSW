@@ -1,89 +1,60 @@
-
 <view class='cu-custom'>
-	<view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
-		<view class='action' open-type="navigateBack" delta="1" hover-class="none">
-    <image class="asd" src="{{uploadpath}}resource/{{res.asd}}"></image>
-			<text  style="color:black;margin-left:8rpx">北京</text>
-		</view> 
-		<view class='content' style='top:{{StatusBar}}px;color:black'>房产详情</view>
-	</view>
-</view>
-<view style="height:{{CustomBar}}px;"></view>
-<!-- <view class=' flex-row flex-center margin-top-20'>
-  <view class='flex-row flex-center' style=''>
-        <view class='flex-1 flex-row flex-column' bindtap='clickbtn' >
-          <view class=' flex-1 h5 padding-10 margin-bottom-5  txt-black txt-bold 'id="false">城市</view>
-          <view  class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-          <view class='flex-row flex-center'>
-          <view  class='margin-top-5 padding-5' wx:for="{{city}}" wx:key='index' wx:if='{{show==false}}' id='true'>{{item.name}}</view>
-          </view>
-          <view  class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
-        </view>
-        </view> -->
+  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+    <view class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <image class="asd" src="{{uploadpath}}resource/{{res.asd}}"></image>
+      <text style="color:black;margin-left:8rpx" bindtap='xiala'>{{currentcity.name}}</text>
 
-<!-- <view class='flex-row flex-center padding-20'>
-  <view class='flex-1'></view>
-  <input style='width:95%' class='radius-10 lan' bindinput='lxfs'></input>
-  <view class='flex-1'></view>
-</view> -->
-
-<view class=' flex-row flex-center margin-top-20'>
-  <view class='flex-row flex-center' style=''>
-    <view class='flex-1 flex-row flex-column margin'>
-      <view class='  flex-1 f-36 margin-bottom-5  txt-black txt-bold'>推荐</view>
-      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
     </view>
-
-    <view class='flex-1 flex-row flex-column margin'>
-      <view class='  flex-1 f-30  margin-bottom-5  txt-gray'>美食</view>
-      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
-    </view>
-
-    <view class='flex-1 flex-row flex-column margin'>
-      <view class='  flex-1 f-30 margin-bottom-5  txt-gray '>活动</view>
-      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
-    </view>
-
-    <view class='flex-1 flex-row flex-column margin'>
-      <view class='  flex-1 f-30  margin-bottom-5  txt-gray '>景点</view>
-      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
-    </view>
-
-    <view class='flex-1 flex-row flex-column margin'>
-      <view class='  flex-1 f-30 padding-10 margin-bottom-5  txt-gray '>攻略</view>
-      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
-    </view>
-
-    <view class='flex-1 flex-row flex-column margin'>
-      <view class='  flex-1 f-30 padding-10 margin-bottom-5  txt-gray '>酒店</view>
-      <view class='bg-black margin-top-5' style='width:80rpx;height:6rpx;'></view>
-      <view class='margin-top-5' style='width:80rpx;height:6rpx;'></view>
-    </view>
+    <view class='content' style='top:{{StatusBar}}px;color:black'>找谁玩</view>
   </view>
+</view>
+
+<view style="height:{{CustomBar}}px;"></view>
+
+<view wx:if='{{show==0}}'>
+  <view class="tab-item {{idx==seq?'n':'n'}}" id="-1" bindtap='citychange'  >全部</view>
+  <view class="tab-item {{idx==seq?'n':'n'}}" wx:for='{{citylist}}' id="{{item.id}}" wx:key="k" bindtap='citychange'>{{item.name}}</view>
 </view>
 
 <!-- <view style='height:2rpx;border-bottom:1rpx solid #ccc'></view> -->
 
 
-<view class='flex-row flex-center flex-wrap bg-gray'>
-  <view wx:for='{{video}}' wx:key='video' class='margin-10 bg-white radius-10' style='width:350rpx'>
-  <view class=''>
-    <image src='{{uploadpath}}video/{{item.tupian}}'class=''style='width:100%;'></image>
-        <view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>
+
+
+<view class='flex-row bg-gray' style='height:100vh'>
+  <view  class=' ' style='width:365rpx'>
+    <view class='bg-white radius-10 margin-left margin-10' bindtap='dian'
+    wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==0}}">
+    
+      <image src='{{uploadpath}}video/{{item.tupian}}' class='' style='width:100%;' mode='widthFix'></image>
+      <view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>
+
+      <view class='flex-row flex-center padd'>
+        <image src='{{uploadpath}}video/{{item.touxiang}}' class='icon'></image>
+        <view class='h6 margin-left-10'>{{item.name}}</view>
+        <view class='flex-1'></view>
+        <view class='h6 '>{{item.fenxiang}}播放</view>
+      </view>
+    
     </view>
-    <view class='flex-row flex-center padd'>
-    <image src='{{uploadpath}}video/{{item.touxiang}}' class='icon'></image>
-    <view class='h6 margin-left-10'>{{item.name}}</view>
-    <view class='flex-1'></view>
-    <view class='h6 '>{{item.fenxiang}}播放</view>
+  </view>
+  <view style='width:365rpx'>
+    <view  class='margin-10 margin-left bg-white radius-10 'bindtap='dian' wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==1}}">
+    
+      <image src='{{uploadpath}}video/{{item.tupian}}' class='' style='width:100%;' mode='widthFix'></image>
+      <view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>
+
+      <view class='flex-row flex-center padd'>
+        <image src='{{uploadpath}}video/{{item.touxiang}}' class='icon'></image>
+        <view class='h6 margin-left-10'>{{item.name}}</view>
+        <view class='flex-1'></view>
+        <view class='h6 '>{{item.fenxiang}}播放</view>
+      </view>
+    
     </view>
- </view>
+  </view>
 </view>
 
-<view style="height:100rpx"></view>
+
+
 <custom-tab-bar></custom-tab-bar>

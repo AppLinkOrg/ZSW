@@ -18,12 +18,18 @@ class Content extends AppBase {
     super.onLoad(options);
     this.Base.needauth = false;
   }
+  setPageTitle() {
+    wx.setNavigationBarTitle({
+      title: '牛牛消毒',
+    });
+  }
   onMyShow() {
     var that = this;
   }
   checkPermission() {
 
   }
+ 
 
   getUserInfo(e) {
     console.log(666666666);

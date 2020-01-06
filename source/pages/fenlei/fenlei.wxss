@@ -7,10 +7,61 @@
 .padd{
   padding: 23rpx 34rpx 19rpx 16rpx;
 }
-.margin{
-  margin:14rpx 27rpx 14rpx 19rpx;
-}
+
 .asd{
   width: 25rpx;
   height: 29rpx;
+}
+.tab-h {
+height: 110rpx;
+width: 100%;
+box-sizing: border-box;
+overflow: hidden;
+line-height: 110rpx;
+/* background: #f7f7f7; */
+font-size: 16px;
+white-space: nowrap;
+border-bottom: 2rpx solid #ccc;
+position: fixed;
+top: 150rpx;
+left: 0;
+z-index: 99;
+}
+
+.tab-item {
+margin: 0 36rpx;
+display: inline-block;
+}
+
+.tab-item.active {
+color: black;
+position: relative;
+}
+
+.tab-item.active:after {
+content: "";
+display: block;
+height: 8rpx;
+width: 40rpx;
+background: black;
+position: absolute;
+bottom: 0;
+left: 17rpx;
+border-radius: 16rpx;
+}
+.zhe{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 15%;
+  bottom: 0;
+  z-index: 1;background:rgba(0,0,0,1);
+  opacity: 0.7;
+}
+
+.n{
+  width: 100rpx;
+  background-color: #ccc;
+  border-radius:29px;
+  text-align: center;
 }

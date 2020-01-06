@@ -19,11 +19,11 @@
     </view>
     <!-- start: custom -->
     <!-- 此处需要自定义，如果不需要可以直接删除这块代码 -->
-    <view class='tab-bar-item tab-bar-item-custom' bind:tap="qiehuan" style='order: {{customOrder}};'>
+    <!-- <view class='tab-bar-item tab-bar-item-custom' bind:tap="qiehuan" style='order: {{customOrder}};'>
       <view class='tab-bar-item-icon'>
         <image src="../../images/icons/asd.png" />
       </view>
-    </view>
+    </view> -->
     <!-- end: custom -->
   </view>
 </view>
