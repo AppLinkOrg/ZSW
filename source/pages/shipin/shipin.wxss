@@ -1,0 +1,14 @@
+/* pages/shipin/shipin.wxss */
+.ceshi {
+  position: fixed;
+  width: 100vw;
+  height: 95vh;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.asd{
+  width: 25rpx;
+  height: 29rpx;
+  color: white;
+}
