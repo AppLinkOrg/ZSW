@@ -31,7 +31,7 @@
     wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==0}}" id='{{item.id}}'>
     
       <image src='{{uploadpath}}video/{{item.tupian}}' class='' style='width:100%;' mode='widthFix'></image>
-      <view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>
+      <view  class='txt-black f-26 padd' >{{item.jianjie}}</view>
 
       <view class='flex-row flex-center padd'>
         <image src='{{uploadpath}}video/{{item.touxiang}}' class='icon'></image>
