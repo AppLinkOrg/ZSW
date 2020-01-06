@@ -11,12 +11,12 @@
   <view class='padding-40' style='padding-top:0rpx;'>
     <view class='f-36 txt-bold txt-black'>该程序将获取以下授权：</view>
     <view class='margin-top-10 flex-row flex-column'>
-      <view class='flex-row flex-center margin-top-60'>
-        <checkbox-group bindchange="checkboxChange">
-          <checkbox value='wx'>获得你的公开信息（昵称、头像等）</checkbox>
-         <checkbox value='mobile' class='txt-gray f-30 margin-top-30' >获得您微信绑定的手机号码</checkbox>
+      <view class=' margin-top-60'>
+        <!-- <checkbox-group bindchange="checkboxChange"> -->
+          <button value='wx'  open-type="getUserInfo" bindgetuserinfo="getUserInfo">获得你的公开信息（昵称、头像等）</button>
+         <button value='mobile' class='txt-gray f-30 margin-top-30' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" >获得您微信绑定的手机号码</button>
 
-        </checkbox-group>
+        <!-- </checkbox-group> -->
         <!-- <selectable-group generic:selectable="custom-checkbox" disabled="{{false}}"  style='border:1rpx solid #ccc'/>
     <view class='txt-gray f-30 '>获得你的公开信息（昵称、头像等）</view> -->
       </view>
@@ -25,8 +25,8 @@
     </view>
     <view style='height:222rpx'></view>
     <view class='margin-top' bindtap="detail">
-      <button wx:if='{{aa=="wx"}}' class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx' open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即开启</button>
-       <button wx:if='{{aa=="mobile"}}' class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo">立即开启</button>
+      <button  class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx'>立即开启</button>
+       <!-- <button wx:if='{{aa=="mobile"}}' class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo">立即开启</button> -->
     </view>
   </view>
 </view>
