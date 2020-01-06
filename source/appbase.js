@@ -171,7 +171,7 @@ export class AppBase {
     instapi.info({}, (instinfo) => {
       if (instinfo == null || instinfo == false) {
 
-        return;
+       // return;
       }
       if (instinfo.instswitch == '否') {
         wx.reLaunch({
@@ -274,7 +274,7 @@ export class AppBase {
         UserInfo: AppBase.UserInfo
       });
 
-      // that.checkPermission();
+       that.checkPermission();
     }
 
   }

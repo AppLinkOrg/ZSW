@@ -17,7 +17,7 @@ class Content extends AppBase {
     super();
   }
 
- 
+
   onLoad(options) {
     this.Base.Page = this;
     //options.id=5;
@@ -28,12 +28,16 @@ class Content extends AppBase {
     var that = this;
     var instapi = new InstApi();
     var memberapi = new MemberApi();
-
-    memberapi.xiangqin({ id: this.Base.options.id }, (xiangqinlist) => {
+console.log('所得税')
+    memberapi.xiangqin({
+      id: this.Base.options.id
+    }, (xiangqinlist) => {
       this.Base.setMyData({
         xiangqinlist
       })
- })
+    })
+
+
   }
 }
 
