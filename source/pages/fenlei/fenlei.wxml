@@ -25,6 +25,8 @@
 </scroll-view>
 
 
+<view style='height:80rpx'></view>
+
 <view class='flex-row bg-gray' style='height:100vh'>
   <view  class=' ' style='width:365rpx'>
     <view class='bg-white radius-10 margin-left margin-10' bindtap='dian'

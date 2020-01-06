@@ -13,7 +13,7 @@
 <view>
   <video src='{{uploadpath}}video/{{xiangqinlist.shipin}}' class='ceshi' controls enable-progress-gesture></video>
 
-  <view style='height:40vh' style='margin-top:780rpx'></view>
+  <view style='height:40vh' style='margin-top:1000rpx' ></view>
 
 <view class='flex-row flex-center margin-right-10'>
 <view class='flex-3'></view>
