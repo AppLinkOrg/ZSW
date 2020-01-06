@@ -343,6 +343,9 @@ button[disabled][type=primary] {
 .margin-top{
   margin-top:40rpx;
 }
+.margin-top-30{
+  margin-top:30rpx;
+}
 .margin-top-60{
   margin-top:60rpx;
 }

@@ -33,11 +33,13 @@ class Content extends AppBase {
 
   getUserInfo(e) {
     console.log(666666666);
-    wx.switchTab({
-      url: '/pages/home/home',
+    wx.navigateTo({
+      url: '/pages/shipin/shipin?id='+this.Base.options.id,
     });
     //open-type="getUserInfo" bindgetuserinfo="getUserInfo"
   }
+
+  
 }
 var content = new Content();
 var body = content.generateBodyJson();

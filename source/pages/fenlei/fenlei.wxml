@@ -2,7 +2,7 @@
   <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
     <view class='action' open-type="navigateBack" delta="1" hover-class="none">
       <image class="asd" src="{{uploadpath}}resource/{{res.asd}}"></image>
-      <text style="color:black;margin-left:8rpx" bindtap='xiala'>{{currentcity.name}}</text>
+      <text style="color:black;margin-left:8rpx" bindtap='xiala' >{{currentcity.name}}</text>
 
     </view>
     <view class='content' style='top:{{StatusBar}}px;color:black'>找谁玩</view>
@@ -12,19 +12,23 @@
 <view style="height:{{CustomBar}}px;"></view>
 
 <view wx:if='{{show==0}}'>
-  <view class="tab-item {{idx==seq?'n':'n'}}" id="-1" bindtap='citychange'  >全部</view>
+  <view class="tab-item {{idx==seq?'n':'n'}}" id="-1" bindtap='citychange'>全部</view>
   <view class="tab-item {{idx==seq?'n':'n'}}" wx:for='{{citylist}}' id="{{item.id}}" wx:key="k" bindtap='citychange'>{{item.name}}</view>
 </view>
 
-<!-- <view style='height:2rpx;border-bottom:1rpx solid #ccc'></view> -->
+<view style='height:80rpx'></view>
+<view style='height:2rpx;border-bottom:1rpx solid #ccc'></view>
 
 
+<scroll-view class="" scroll-x="true" class="tab-h bg-white" wx:if='{{show==1}}'>
+<view class="tab-item {{idx==seq?'active':''}}" wx:for='{{fenlei}}' wx:key="sa" wx:for-index="idx" id='{{item.id}}' data-current="{{idx}}" bindtap="swichNav">{{item.name}}</view>
+</scroll-view>
 
 
 <view class='flex-row bg-gray' style='height:100vh'>
   <view  class=' ' style='width:365rpx'>
     <view class='bg-white radius-10 margin-left margin-10' bindtap='dian'
-    wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==0}}">
+    wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==0}}" id='{{item.id}}'>
     
       <image src='{{uploadpath}}video/{{item.tupian}}' class='' style='width:100%;' mode='widthFix'></image>
       <view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>

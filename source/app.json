@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/fenlei/fenlei",
+    "pages/shipin/shipin",
     "pages/home/home",
     "pages/auth/auth"
   ],

@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -52,6 +52,13 @@
 					"id": -1,
 					"name": "授权",
 					"pathName": "pages/fenlei/fenlei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "视频",
+					"pathName": "pages/shipin/shipin",
 					"scene": null
 				}
 			]
