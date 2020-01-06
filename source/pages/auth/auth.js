@@ -7,7 +7,9 @@ import {
 import {
   InstApi
 } from "../../apis/inst.api.js";
-
+import {
+  MemberApi
+} from "../../apis/member.api.js";
 class Content extends AppBase {
   constructor() {
     super();
@@ -29,21 +31,34 @@ class Content extends AppBase {
   checkPermission() {
 
   }
- 
 
-  getUserInfo(e) {
-    console.log(666666666);
-    wx.navigateTo({
-      url: '/pages/shipin/shipin?id='+this.Base.options.id,
-    });
-    //open-type="getUserInfo" bindgetuserinfo="getUserInfo"
+  checkboxChange(e) {
+    console.log(e);
+    console.log(e.detail.value)
+    var xuanze = e.detail.value;
+    for(var i=0;i<xuanze.length;i++){
+      if(xuanze[i]=='wx'){
+        var aa='wx'
+      }else if(xuanze[i]=='mobile'){
+        var aa = 'mobile'
+      }
+    }
+    this.Base.setMyData({
+      xuanze: xuanze,aa
+    })
   }
 
-  
+  detail(){
+    console.log(AppBase.UserInfo);
+    console.log()
+  }
+
 }
 var content = new Content();
 var body = content.generateBodyJson();
-body.onLoad = content.onLoad; 
+body.onLoad = content.onLoad;
 body.onMyShow = content.onMyShow;
 body.getUserInfo = content.getUserInfo;
+body.checkboxChange = content.checkboxChange;
+body.detail = content.detail;
 Page(body)

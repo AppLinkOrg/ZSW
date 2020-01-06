@@ -114,7 +114,8 @@ export class AppBase {
       contactkefu: base.contactkefu,
       contactweixin: base.contactweixin,
       download: base.download,
-      checkPermission: base.checkPermission
+      checkPermission: base.checkPermission,
+      getUserInfo: base.getUserInfo
 
 
 
@@ -223,7 +224,7 @@ export class AppBase {
                     UserInfo: AppBase.UserInfo
                   });
 
-                  that.checkPermission();
+                  // that.checkPermission();
 
                 });
 
@@ -273,9 +274,71 @@ export class AppBase {
         UserInfo: AppBase.UserInfo
       });
 
-      that.checkPermission();
+      // that.checkPermission();
     }
 
+  }
+
+  getUserInfo() {
+    var that = this;
+    var memberapi = new MemberApi();
+    wx.login({
+          success: res => {
+            // 发送 res.code 到后台换取 openId, sessionKey, unionId
+            console.log(res);
+            wx.getUserInfo({
+              success: userres => {
+                AppBase.UserInfo = userres.userInfo;
+                console.log('哈哈哈哈哈哈')
+                console.log(userres);
+
+                var memberapi = new MemberApi();
+                memberapi.getuserinfo({
+                  code: res.code,
+                  grant_type: "authorization_code"
+                }, data => {
+                  console.log("here");
+                  console.log(data);
+                  AppBase.UserInfo.openid = data.openid;
+                  AppBase.UserInfo.session_key = data.session_key;
+                  console.log(AppBase.UserInfo);
+                  ApiConfig.SetToken(data.openid);
+                  console.log("goto update info");
+                  memberapi.update(AppBase.UserInfo, (ret) => {
+                    console.log("member update");
+                    console.log(ret);
+                  });
+                  // console.log(that.Base.options.id,'that.Base.options.id')
+          // wx.navigateTo({
+          //         url: '/pages/shipin/shipin?id=' + that.Base.options.id,
+          //       });
+                  // wx.redirectTo({
+                  //   url: '/pages/shipin/shipin?id=' +  that.Base.options.id,
+                  // })
+                  console.log(AppBase.UserInfo);
+                  that.Base.setMyData({
+                    UserInfo: AppBase.UserInfo
+                  });
+                  that.onMyShow();
+
+                  //that.Base.getAddress();
+                });
+              },
+              fail: res => {
+                console.log(res);
+                //that.Base.gotoOpenUserInfoSetting();
+                if (this.Base.needauth == true) {
+                  wx.redirectTo({
+                    url: '/pages/auth/auth',
+                  });
+                } else {
+                  that.onMyShow();
+                }
+                //that.Base.getAddress();
+              }
+            });
+          }
+        })
   }
   checkPermission() {
     var memberapi = new MemberApi();
@@ -283,7 +346,7 @@ export class AppBase {
     memberapi.info({}, (info) => {
       if ((info==null||info.mobile == "") && this.Base.needauth == true) {
         wx.navigateTo({
-          url: '/pages/auth/auth',
+          // url: '/pages/auth/auth',
         })
       } else {
 
@@ -355,6 +418,9 @@ export class AppBase {
     console.log(e.detail);
     api.decrypteddata(e.detail, (ret) => {
       console.log(ret);
+      // wx.redirectTo({
+      //   url: '/pages/shipin/shipin?id=' + that.Base.options.id,
+      // })
       that.phonenoCallback(ret.return.phoneNumber, e);
     });
   }

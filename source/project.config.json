@@ -38,6 +38,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 3,
 			"list": [
@@ -64,8 +68,13 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "我的",
 					"pathName": "pages/home/home",
+=======
+					"name": "pages/auth/auth",
+					"pathName": "pages/auth/auth",
+>>>>>>> f8e5a2212ffa24e99cb22a4b4a64dbb9c6a1ef44
 					"scene": null
 				}
 			]
