@@ -1,4 +1,4 @@
-home
+
 
 <view style="height:200rpx"></view>
 <custom-tab-bar></custom-tab-bar>

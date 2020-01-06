@@ -2,7 +2,7 @@
 <view class='cu-custom'>
   <view class="cu-bar fixed margin-top-97" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
     <view class='action' open-type="navigateBack" delta="1" hover-class="none">
-      <image class="asd" src="{{uploadpath}}resource/{{res.asd}}"></image>
+      <image class="asd" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
       <text style="color:white;margin-left:8rpx" bindtap='xiala' >{{xiangqinlist.city_name}}</text>
 
     </view>
@@ -13,7 +13,7 @@
 <view>
   <video src='{{uploadpath}}video/{{xiangqinlist.shipin}}' class='ceshi' controls enable-progress-gesture></video>
 
-  <view style='height:40vh' style='margin-top:650rpx'></view>
+  <view style='height:40vh' style='margin-top:780rpx'></view>
 
 <view class='flex-row flex-center margin-right-10'>
 <view class='flex-3'></view>
@@ -38,7 +38,7 @@
   <view class='txt-white'>{{xiangqinlist.fenxiang}}</view>
   </view>
 
-  <view style='height:10vh'></view>
+  <view style='height:2vh'></view>
   <view class='txt-white padding f-36'>{{xiangqinlist.name}}</view>
     <view class='flex-row flex-center margin-left-10'>
 <view class='flex-1'></view>

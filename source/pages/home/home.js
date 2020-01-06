@@ -1,12 +1,21 @@
-// pages/content/content.js
-import { AppBase } from "../../appbase";
-import { ApiConfig } from "../../apis/apiconfig";
-import { InstApi } from "../../apis/inst.api.js";
+import {
+  AppBase
+} from "../../appbase";
+import {
+  ApiConfig
+} from "../../apis/apiconfig";
+import {
+  InstApi
+} from "../../apis/inst.api.js";
+import {
+  MemberApi
+} from "../../apis/member.api.js";
 
 class Content extends AppBase {
   constructor() {
     super();
   }
+
   onLoad(options) {
     this.Base.Page = this;
     //options.id=5;
@@ -16,7 +25,8 @@ class Content extends AppBase {
   onMyShow() {
     var that = this;
     var instapi = new InstApi();
-
+    var memberapi = new MemberApi();
+    
     instapi.city({}, (indexbanner) => {
       this.Base.setMyData({ indexbanner });
     });

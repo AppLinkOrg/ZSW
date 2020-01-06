@@ -21,7 +21,7 @@
 
 
 <scroll-view class="" scroll-x="true" class="tab-h bg-white" wx:if='{{show==1}}'>
-<view class="tab-item {{idx==seq?'active':''}}" wx:for='{{fenlei}}' wx:key="sa" wx:for-index="idx" id='{{item.id}}' data-current="{{idx}}" bindtap="swichNav">{{item.name}}</view>
+<view class="tab-item {{idx==seq?'active':''}}" wx:for='{{fenlei}}' wx:key="sa" wx:for-index="idx" id='{{item.id}}' id='{{item.name}}' data-current="{{idx}}" bindtap="swichNav">{{item.name}}</view>
 </scroll-view>
 
 
