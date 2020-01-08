@@ -43,13 +43,12 @@
 			"list": []
 		},
 		"game": {
-<<<<<<< HEAD
-=======
+
 			"list": []
 		},
 		"gamePlugin": {
 			"current": -1,
->>>>>>> 5e9c6251869e6afba1946e967d46ae33a291ade9
+
 			"list": []
 		},
 		"miniprogram": {
@@ -78,13 +77,13 @@
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
+
 					"name": "我的",
 					"pathName": "pages/home/home",
-=======
+
 					"name": "pages/auth/auth",
 					"pathName": "pages/auth/auth",
->>>>>>> 5e9c6251869e6afba1946e967d46ae33a291ade9
+
 					"query": "",
 					"scene": null
 				}
