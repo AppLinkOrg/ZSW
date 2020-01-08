@@ -21,6 +21,10 @@ class Content extends AppBase {
   onLoad(options) {
     this.Base.Page = this;
     //options.id=5;
+    var show=1;
+    this.Base.setMyData({
+      show
+    })
     super.onLoad(options);
   }
 
@@ -33,12 +37,23 @@ console.log('所得税')
       id: this.Base.options.id
     }, (xiangqinlist) => {
       this.Base.setMyData({
-        xiangqinlist
-      })
+            xiangqinlist
+       
+        })
+       
     })
+ }
 
 
+  aa(e){
+    var type = e.currentTarget.id
+
+    console.log(e, '节点值', type, '获取节点值');
+    this.Base.setMyData({
+      show:0
+    })
   }
+
 }
 
 var content = new Content();
@@ -46,9 +61,5 @@ var body = content.generateBodyJson();
 body.onLoad = content.onLoad;
 
 body.onMyShow = content.onMyShow;
-body.loadlist = content.loadlist;
-body.xiala = content.xiala;
-body.citychange = content.citychange;
-body.swichNav = content.swichNav;
-body.dian = content.dian;
+body.aa=content.aa;
 Page(body)

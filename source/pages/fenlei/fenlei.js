@@ -66,6 +66,7 @@ class Content extends AppBase {
       this.Base.setMyData({
         citylist
       })
+   
     })
     this.loadlist();
 
@@ -90,6 +91,9 @@ class Content extends AppBase {
     var citylist = this.Base.getMyData().citylist;
     var currentcity=null;
     var currentfenlei=null;
+
+    this.Base.setMyData({ye:e.currentTarget.dataset.current})
+
     for (var i = 0; i < citylist.length;i++){
       if(citylist[i].id==e.currentTarget.id){
         currentcity=citylist[i];

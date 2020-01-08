@@ -1,10 +1,16 @@
 /**index.wxss**/
-page{
+
+page {
   background: white;
 }
-.dot{
-  width:10rpx;
+
+.dot {
+  width: 10rpx;
   height: 10rpx;
-  background-color:#bbbbbb;
+  background-color: #bbb;
   border-radius: 50%;
+}
+
+.fixed {
+  position: absolute;
 }

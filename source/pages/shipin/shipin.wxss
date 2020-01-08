@@ -1,4 +1,5 @@
 /* pages/shipin/shipin.wxss */
+
 .ceshi {
   position: fixed;
   width: 100vw;
@@ -7,8 +8,19 @@
   bottom: 0;
   z-index: -1;
 }
-.asd{
+
+.asd {
   width: 25rpx;
   height: 29rpx;
   color: white;
 }
+
+.ceng {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.8;
+}
+
