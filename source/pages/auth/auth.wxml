@@ -1,6 +1,7 @@
 
 
 <!--index.wxml-->
+
 <view style='height:100vh' class='bg-gray'>
   <view style='margin-top:160rpx;' class='text-center'>
     <image src='{{uploadpath}}inst/{{instinfo.logo}}' style='width:154rpx;height:154rpx;margin-top:190rpx;border-radius:20rpx' mode='widthFix'></image>
