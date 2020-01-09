@@ -224,7 +224,7 @@ export class AppBase {
                     UserInfo: AppBase.UserInfo
                   });
 
-                  // that.checkPermission();
+                   that.checkPermission();
 
                 });
 
@@ -335,6 +335,7 @@ export class AppBase {
         })
   }
   checkPermission() {
+    console.log("那真的牛皮");
     var memberapi = new MemberApi();
     var that = this;
     memberapi.info({}, (info) => {
@@ -350,6 +351,7 @@ export class AppBase {
         that.onMyShow();
       }
     });
+   
   }
   loadtabtype() {
     console.log("loadtabtype");

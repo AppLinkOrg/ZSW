@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -18,10 +19,11 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"showShadowRootInWxmlPanel": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.9.4",
+	"libVersion": "2.10.0",
 	"appid": "wxfffd6d41411c4224",
 	"projectname": "%E6%89%BE%E8%B0%81%E7%8E%A9",
 	"cloudfunctionTemplateRoot": "",
@@ -29,6 +31,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -43,16 +47,14 @@
 			"list": []
 		},
 		"game": {
-
 			"list": []
 		},
 		"gamePlugin": {
 			"current": -1,
-
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -77,14 +79,16 @@
 				},
 				{
 					"id": -1,
-
-					"name": "我的",
-					"pathName": "pages/home/home",
-
 					"name": "pages/auth/auth",
 					"pathName": "pages/auth/auth",
-
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/shipin/shipin",
+					"pathName": "pages/shipin/shipin",
+					"query": "id=3",
 					"scene": null
 				}
 			]
