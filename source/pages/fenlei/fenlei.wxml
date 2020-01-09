@@ -51,7 +51,7 @@
 
 
  	<view style='width:370rpx;margin-top:30rpx; '>
- 		<view class='margin-10 margin-left-10 bg-white radius-10 ' bindtap='dian' wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==1}}">
+ 		<view class='margin-10 margin-left-10 bg-white radius-10 ' bindtap='dian' wx:for='{{videolist}}' wx:key='video' wx:for-index="idx" wx:if="{{idx%2==1}}" id='{{item.id}}'>
 
  			<image src='{{uploadpath}}video/{{item.tupian}}' style='width:100%;border-radius:20rpx 20rpx 0rpx 0rpx' mode='widthFix'></image>
  			<view style='' class='txt-black f-26 padd' style=''>{{item.jianjie}}</view>

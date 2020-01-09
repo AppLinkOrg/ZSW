@@ -39,7 +39,6 @@ class Content extends AppBase {
       interval,
       touchMoveX,
       touchMoveY,
-
     })
   }
 

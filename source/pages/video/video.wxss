@@ -1,0 +1,14 @@
+/* pages/video/video.wxss */
+.videobody{
+  width:100vw;
+  height: 100vh;
+}
+
+.ceng {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 1);
+  opacity: 0.8;
+}

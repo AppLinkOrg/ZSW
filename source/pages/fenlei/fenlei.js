@@ -143,7 +143,7 @@ class Content extends AppBase {
     // })
 
       wx.navigateTo({
-        url: '/pages/shipin/shipin?id=' + e.currentTarget.id,
+        url: '/pages/video/video?id=' + e.currentTarget.id,
      })
   }
 

@@ -831,13 +831,19 @@ export class AppBase {
   }
 
   backPage() {
-    wx.navigateBack({
-
-    });
+    var pages = getCurrentPages();
+    console.log(pages);
+    if (pages.length <= 1) {
+      wx.switchTab({
+        url: '/pages/fenlei/fenlei',
+      })
+    } else {
+      wx.navigateBack({});
+    }
   }
   backHome() {
     wx.switchTab({
-      url: '/pages/home/home',
+      url: '/pages/fenlei/fenlei',
     })
   }
   logout() {
