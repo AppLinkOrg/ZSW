@@ -60,7 +60,8 @@ class Content extends AppBase {
         url1: videolist[1],
         url2: videolist[2],
         url3: videolist[videolist.length - 1],
-        current: this.Base.current
+        current: this.Base.current,
+        videolength:videolist.length
       });
       if (iknow != "") {
         if (this.Base.video0 != null) {
