@@ -1,0 +1,54 @@
+
+<view class='ceng' style='height:100vh;width:100vw' wx:if='{{show=="1"}}'>
+
+
+	<view class='flex-row flex-center' style='margin-top:530rpx;'>
+		<view class='flex-1'></view>
+		<view class='txt-white margin-right-40 f-28'>左滑返回列表</view>
+		<image src='{{uploadpath}}resource/{{res.zuoyou}}' class='icon-75 margin-top-97'></image>
+		<view class='txt-white margin-left-40 f-28'>右滑查看攻略</view>
+		<view class='flex-1'></view>
+	</view>
+
+	<view style='height:88rpx'></view>
+
+	<view class='flex-row flex-column'>
+		<view class='flex-1'></view>
+		<image src='{{uploadpath}}resource/{{res.shang}}' style='width:25rpx;height:48rpx'></image>
+		<view class='txt-white margin-top-30 f-28'>上、下滑刷新视频</view>
+		<image src='{{uploadpath}}resource/{{res.shou}}' class='margin-left-100' style='width:62rpx ;height:52rpx'></image>
+		<image src='{{uploadpath}}resource/{{res.xiahua}}' style='width:25rpx;height:48rpx'></image>
+		<view class='flex-1'></view>
+	</view>
+
+	<view style='height:109rpx'></view>
+
+	<view class='flex-row flex-center'>
+		<view class='flex-1'></view>
+		<view class='txt-white text-center padding-top-20 f-28' bindtap='iknow' style='border-radius:40px;border:1rpx solid #ccc;width:308rpx;height:80rpx'>我知道了</view>
+		<view class='flex-1'></view>
+	</view>
+</view>
+
+
+
+
+
+
+
+<view hidden="{{videolength==0}}" class="videobody" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <swiper class="videobody" bindchange="videochange" vertical='{{true}}' circular='{{current>0&&current<videolength-1}}'  >
+    <swiper-item class="videobody">
+      <video id="video0" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}"  enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
+    </swiper-item>
+    <swiper-item class="videobody">
+      <video id="video1" bindplay="videoplay" bindpause="videopause"  controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
+    </swiper-item>
+    <swiper-item class="videobody">
+      <video id="video2" bindplay="videoplay" bindpause="videopause"  controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}"  enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
+    </swiper-item>
+    <swiper-item class="videobody">
+      <video id="video3" bindplay="videoplay" bindpause="videopause"  controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}"  enable-play-gesture="{{true}}"  class="videobody" src="{{url3.vod}}"> </video>
+    </swiper-item>
+  </swiper>
+</view>

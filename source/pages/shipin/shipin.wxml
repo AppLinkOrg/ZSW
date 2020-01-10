@@ -1,12 +1,12 @@
 <view class='cu-custom'>
-  <view class="cu-bar fixed margin-top-97" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
-    <view class='action' open-type="navigateBack" delta="1" hover-class="none">
-      <image class="asd" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
-      <text style="color:white;margin-left:8rpx" bindtap='xiala'>{{xiangqinlist.city_name}}</text>
+	<view class="cu-bar fixed margin-top-97" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+		<view class='action' open-type="navigateBack" delta="1" hover-class="none">
+			<image class="asd" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
+			<text style="color:white;margin-left:8rpx" bindtap='xiala'>{{xiangqinlist.city_name}}</text>
 
-    </view>
-    <!-- <view class='content' style='top:{{StatusBar}}px;color:black'>找谁玩</view> -->
-  </view>
+		</view>
+		<!-- <view class='content' style='top:{{StatusBar}}px;color:black'>找谁玩</view> -->
+	</view>
 </view>
 
 
@@ -14,61 +14,87 @@
 <view class='ceng' style='height:100vh;width:100vw' wx:if='{{show=="1"}}'>
 
 
-  <view class='flex-row flex-center' style='margin-top:530rpx;'>
-    <view class='flex-1'></view>
-    <view class='txt-white margin-right-40 f-28'>左滑返回列表</view>
-    <image src='{{uploadpath}}resource/{{res.zuoyou}}' class='icon-75 margin-top-97'></image>
-    <view class='txt-white margin-left-40 f-28'>右滑查看攻略</view>
-    <view class='flex-1'></view>
-  </view>
+	<view class='flex-row flex-center' style='margin-top:530rpx;'>
+		<view class='flex-1'></view>
+		<view class='txt-white margin-right-40 f-28'>左滑返回列表</view>
+		<image src='{{uploadpath}}resource/{{res.zuoyou}}' class='icon-75 margin-top-97'></image>
+		<view class='txt-white margin-left-40 f-28'>右滑查看攻略</view>
+		<view class='flex-1'></view>
+	</view>
 
-  <view style='height:88rpx'></view>
+	<view style='height:88rpx'></view>
 
-  <view class='flex-row flex-column'>
-    <view class='flex-1'></view>
-    <image src='{{uploadpath}}resource/{{res.shang}}' style='width:25rpx;height:48rpx'></image>
-    <view class='txt-white margin-top-30 f-28'>上、下滑刷新视频</view>
-    <image src='{{uploadpath}}resource/{{res.shou}}' class='margin-left-100' style='width:62rpx ;height:52rpx'></image>
-    <image src='{{uploadpath}}resource/{{res.xiahua}}' style='width:25rpx;height:48rpx'></image>
-    <view class='flex-1'></view>
-  </view>
+	<view class='flex-row flex-column'>
+		<view class='flex-1'></view>
+		<image src='{{uploadpath}}resource/{{res.shang}}' style='width:25rpx;height:48rpx'></image>
+		<view class='txt-white margin-top-30 f-28'>上、下滑刷新视频</view>
+		<image src='{{uploadpath}}resource/{{res.shou}}' class='margin-left-100' style='width:62rpx ;height:52rpx'></image>
+		<image src='{{uploadpath}}resource/{{res.xiahua}}' style='width:25rpx;height:48rpx'></image>
+		<view class='flex-1'></view>
+	</view>
 
-  <view style='height:109rpx'></view>
+	<view style='height:109rpx'></view>
 
-  <view class='flex-row flex-center'>
-    <view class='flex-1'></view>
-    <view class='txt-white text-center padding-top-20 f-28' bindtap='aa' style='border-radius:40px;border:1rpx solid #ccc;width:308rpx;height:80rpx'>我知道了</view>
-    <view class='flex-1'></view>
-  </view>
+	<view class='flex-row flex-center'>
+		<view class='flex-1'></view>
+		<view class='txt-white text-center padding-top-20 f-28' bindtap='aa' style='border-radius:40px;border:1rpx solid #ccc;width:308rpx;height:80rpx'>我知道了</view>
+		<view class='flex-1'></view>
+	</view>
 </view>
+<!-- 
+<view wx:if='{{show=="0"}}' class="ceshi" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"> -->
+
+<view wx:if='{{show=="0"}}' class="ceshi">
+	<swiper current="{{idxd}}" bindchange="huadon" duration='200' circular='true' style="height:100vh" vertical="{{true}}">
+		<swiper-item wx:for="{{video}}" wx:for-index="idx" wx:key="k">
+			<view class='ceshi'>
+				<video autoplay='{{true}}' poster='{{uploadpath}}video/{{item.cover}}' initial-time='0.1' id="v_{{idx}}" show-play-btn='{{false}}' loop='{{true}}'
+         bindtap="zantin" controls='{{false}}' src='{{uploadpath}}video/{{item.shipin}}' class="ceshi">
+
+				</video>
+
+				<view style='height:40vh' style='margin-top:800rpx'></view>
+
+				<view class='flex-row flex-center margin-right-30'>
+					<view class='flex-3'></view>
+					<image src='{{uploadpath}}video/{{xiangqinlist.touxiang}}' class='icon-50 radius-50'></image>
+				</view>
 
 
-<view>
+				<view style='height:5vh'></view>
 
+				<view class='flex-row flex-center margin-right-30'>
+					<view class='flex-3'></view>
+					<image src='{{uploadpath}}resource/{{res.dianzan}}' class='icon-40 '></image>
+				</view>
+				<view class='flex-row flex-center margin-right-30'>
+					<view class='flex-3'></view>
+					<view class='txt-white margin-right-30'>0</view>
+				</view>
+				<view style='height:5vh'></view>
 
-  <video src='{{uploadpath}}video/{{xiangqinlist.shipin}}' wx:if='{{show=="0"}}' class='ceshi' autoplay enable-progress-gesture></video>
+				<view class='flex-row flex-center margin-right-30 '>
+					<view class='flex-3'></view>
+					<image src='{{uploadpath}}resource/{{res.zhuanfa}}' class='icon-40 '></image>
+				</view>
+				<view class='flex-row flex-center margin-right-30'>
+					<view class='flex-3'></view>
+					<view class='txt-white'>{{item.fenxiang}}</view>
+				</view>
 
-  <view style='height:40vh' style='margin-top:800rpx'></view>
+				<view style='height:2vh'></view>
+				<view></view>
+				<view class='txt-white padding f-36'>{{item.name}}</view>
+				<view class='flex-row flex-center margin-left-10'>
+					<view class='flex-1'></view>
+					<view class='txt-white padding-5' wx:for="{{item.departmentlist}}" wx:for-item="item1">
+						<text style='color:white;padding-right:28rpx'>#{{item1.name}}#</text>{{item.jianjie}}</view>
+					<view class='flex-1'></view>
+				</view>
+			</view>
+		</swiper-item>
 
-  <view class='flex-row flex-center margin-right-30'>
-    <view class='flex-3'></view>
-    <image src='{{uploadpath}}video/{{xiangqinlist.touxiang}}' class='icon-50 radius-50'></image>
-  </view>
-
-
-  <view style='height:5vh'></view>
-
-  <view class='flex-row flex-center margin-right-30'>
-    <view class='flex-3'></view>
-    <image src='{{uploadpath}}resource/{{res.dianzan}}' class='icon-40' bindtap='aaa'  wx:if='{{xian==true}}' style='position:fixed;right:28rpx;margin-top:4rpx'></image>
-    <image src='{{uploadpath}}resource/{{res.zan}}' class='icon-40 ' bindtap='aaa'  wx:if='{{xian==false}}'style='position:fixed;right:28rpx;margin-top:4rpx'></image>
-  </view>
-  <view class='flex-row flex-center margin-right-30'style='margin-top:50rpx'>
-    <view class='flex-3'></view>
-    <view class='txt-white margin-right-30'>0</view>
-  </view>
-  <view style='height:5vh'></view>
-
+	</swiper>
   <view class='flex-row flex-center margin-right-30 '>
     <view class='flex-3'></view>
     <image src='{{uploadpath}}resource/{{res.zhuanfa}}' class='icon-40 ' bindtap='fen' id='{{item.id}}'></image>
@@ -76,6 +102,35 @@
   <!-- <button open-type='share'  class='clear-button'></button>  -->
   <view class='flex-row flex-center margin-right-20'>
     <view class='flex-1'></view>
+    <view class='txt-white margin-right-30'>{{xiangqinlist.fenxiang}}</view>
+
+  </view>
+
+  <view style='height:2vh'></view>
+
+  <view class='txt-white padding f-36'>{{xiangqinlist.name}}</view>
+  <view class='flex-row flex-center margin-left-10'>
+    <view class='txt-white padding-5' wx:for="{{xiangqinlist.departmentlist}}">
+      <text style='color:white;padding-right:28rpx'>#{{item.name}}#</text>{{xiangqinlist.jianjie}}</view>
+    <view class='flex-1'></view>
+  </view>
+</view>
+  <!-- <button open-type='share'  class='clear-button'></button>  -->
+  <view class='flex-row flex-center margin-right-20'>
+    <view class='flex-1'></view>
+    <view class='txt-white margin-right-30'>{{xiangqinlist.fenxiang}}</view>
+
+  </view>
+
+  <view style='height:2vh'></view>
+
+  <view class='txt-white padding f-36'>{{xiangqinlist.name}}</view>
+  <view class='flex-row flex-center margin-left-10'>
+    <view class='txt-white padding-5' wx:for="{{xiangqinlist.departmentlist}}">
+      <text style='color:white;padding-right:28rpx'>#{{item.name}}#</text>{{xiangqinlist.jianjie}}</view>
+    <view class='flex-1'></view>
+  </view>
+ <view class='flex-1'></view>
     <view class='txt-white margin-right-30'>{{xiangqinlist.fenxiang}}</view>
 
   </view>

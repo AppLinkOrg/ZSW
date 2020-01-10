@@ -6,6 +6,7 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -18,10 +19,12 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		}，
+"showShadowRootInWxmlPanel": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.4",
+"libVersion": "2.10.0",
 	"appid": "wxfffd6d41411c4224",
 	"projectname": "%E6%89%BE%E8%B0%81%E7%8E%A9",
 	"cloudfunctionTemplateRoot": "",
@@ -29,6 +32,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -67,11 +72,12 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "视频",
+					"id": 4,
+					"name": "pages/shipin/shipin",
 					"pathName": "pages/shipin/shipin",
-					"query": "",
+					"query": "id=3",
 					"scene": null
+
 				},
 				{
 					"id": -1,
