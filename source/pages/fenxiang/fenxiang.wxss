@@ -1,0 +1,10 @@
+.asd {
+  width: 26rpx;
+  height: 29rpx;
+}
+page {
+  background: #f2f2f2;
+}
+.mar{
+  margin:30rpx 30rpx 0rpx 30rpx;
+}

@@ -138,13 +138,13 @@ class Content extends AppBase {
  }
   dian(e){
     console.log(e)
-    // wx.navigateTo({
-    //   url: '/pages/auth/auth?id=' + e.currentTarget.id,
-    // })
+    wx.navigateTo({
+      url: '/pages/auth/auth?id=' + e.currentTarget.id,
+    })
 
-      wx.navigateTo({
-        url: '/pages/video/video?id=' + e.currentTarget.id,
-     })
+    //   wx.navigateTo({
+    //     url: '/pages/video/video?id=' + e.currentTarget.id,
+    //  })
   }
 
 }

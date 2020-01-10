@@ -22,8 +22,10 @@ class Content extends AppBase {
     this.Base.Page = this;
     //options.id=5;
     var show = 1;
+    var xian=true;
     this.Base.setMyData({
-      show
+      show,
+      xian
     })
     super.onLoad(options);
     var touchStartX = 0; //触摸时的原点  
@@ -220,6 +222,7 @@ class Content extends AppBase {
     console.log(e, '节点值', type, '获取节点值');
   var ss=this.Base.getMyData().xian;
   ss=!ss
+  
 
     this.Base.setMyData({
       xian: ss

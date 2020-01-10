@@ -1,0 +1,29 @@
+<view class='cu-custom'>
+  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+    <view class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <image class="asd" src="{{uploadpath}}resource/{{res.fanhui}}" bindtap='hui'></image>
+      <!-- <text style="color:black;margin-left:8rpx" bindtap='xiala' class=''>{{currentcity.name}}</text> -->
+
+    </view>
+    <view class='content' style='top:{{StatusBar}}px;color:black'>我的收藏</view>
+  </view>
+</view>
+
+<view style="height:{{CustomBar}}px;"></view>
+
+
+<view class='bg-white margin-top-30 flex-row padding-20 margin-left-20 radius-15' style='width:712rpx;height:228rpx;'>
+
+<image src='{{uploadpath}}resource/{{res.q}}'class='pas' style='width:278rpx;height:193rpx'></image>
+<view class='flex-row flex-1 flex-row column margin-left-20'>
+
+<view class='f-30 txt-black' style='margin:0rpx 34rpx 0rpx 24rpx'>愿世间的美好与你环环相扣 只争朝夕，不负韶华</view>
+
+<view class='flex-row flex-center padding-15'>
+<view class='txt-gray f-26'>#生活#</view>
+<view class='flex-1'></view>
+<image src='{{uploadpath}}resource/{{res.zan}}' style='width:28rpx;height:26rpx' mode="{{item.widthFix}}"></image>
+<view class='txt-gray f-26'>1254</view>
+</view>
+</view>
+</view>

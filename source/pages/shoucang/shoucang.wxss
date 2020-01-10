@@ -1,0 +1,10 @@
+.asd {
+  width: 26rpx;
+  height: 29rpx;
+}
+page {
+  background: #f2f2f2;
+}
+.pas{
+  margin: 0rpx 0rpx 19rpx 16rpx
+}

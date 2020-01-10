@@ -1,0 +1,94 @@
+<view class='cu-custom'>
+  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+    <view class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <image class="asd" src="{{uploadpath}}resource/{{res.fanhui}}" bindtap='hui'></image>
+      <text style="color:black;margin-left:8rpx" bindtap='xiala' class='h5'>播放视频</text>
+
+    </view>
+    <view class='content' style='top:{{StatusBar}}px;color:black'>视频详情</view>
+  </view>
+</view>
+
+<view style="height:{{CustomBar}}px;"></view>
+
+
+<!-- 一 -->
+<image src='{{uploadpath}}resource/{{res.q}}' style='width:100vw'></image>
+
+<view class='flex-row flex-center margin-top'>
+  <view class='flex-1'></view>
+  <image src='{{uploadpath}}resource/{{res.bao}}' class='icon-25 margin-right-30 radius-50'></image>
+  <view class='f-36 txt-black txt-bold margin-right-10'>千里之外</view>
+  <view class='f-36 txt-black margin-right-20'>|</view>
+  <view class='f-36 txt-black txt-bold'>愿世间的美好与你环环相扣</view>
+  <view class='flex-1'></view>
+</view>
+
+<view class='flex-row flex-center' style='margin:32rpx 0rpx 0rpx 26rpx'>
+  <view class='f-26 txt-black'>#生活#</view>
+</view>
+
+<view class='flex-row flex-center f-26 margin-20'>
+  <view class='flex-1'></view>
+  贺词温暖人心、催人奋进，我们要认真学习、深刻领会， 在新的一年里奋发有为，勇毅笃行，只争朝夕，不负韶华。 “凡事预则立，不预则废”。现在，各地都在筹备召开“两会”， 各部门各单位都在总结2019年的工作、研究2020年的工作。
+  <view class='flex-1'></view>
+</view>
+
+<view style='height:35rpx'></view>
+
+<view class='flex-row flex-center f-26 margin-20'>
+  <view class='flex-1'></view>
+  贺词温暖人心、催人奋进，我们要认真学习、深刻领会， 在新的一年里奋发有为，勇毅笃行，只争朝夕，不负韶华。 “凡事预则立，不预则废”。现在，各地都在筹备召开“两会”， 各部门各单位都在总结2019年的工作、研究2020年的工作。
+  <view class='flex-1'></view>
+</view>
+
+
+<!-- 二 -->
+<view class='flex-row flex-center'>
+<view class='flex-1'></view>
+<image src='{{uploadpath}}resource/{{res.e}}' style='width:700rpx;height:340rpx'></image>
+<view class='flex-1'></view>
+</view>
+
+<view class='flex-row flex-center margin-top margin-left-20'>
+  <view class='f-36 txt-black txt-bold'>愿世间的美好与你环环相扣</view>
+  <view class='flex-1'></view>
+</view>
+
+
+<view class='flex-row flex-center f-26 margin-20'>
+  <view class='flex-1'></view>
+  贺词温暖人心、催人奋进，我们要认真学习、深刻领会， 在新的一年里奋发有为，勇毅笃行，只争朝夕，不负韶华。 “凡事预则立，不预则废”。现在，各地都在筹备召开“两会”， 各部门各单位都在总结2019年的工作、研究2020年的工作。
+  <view class='flex-1'></view>
+</view>
+
+<view style='height:35rpx'></view>
+
+<!-- 三 -->
+<view class='flex-row flex-center'>
+<view class='flex-1'></view>
+<image src='{{uploadpath}}resource/{{res.s}}' style='width:700rpx;height:340rpx'></image>
+<view class='flex-1'></view>
+</view>
+<view class='flex-row flex-center margin-top margin-left-20'>
+
+  <view class='f-36 txt-black txt-bold'>愿世间的美好与你环环相扣</view>
+  <view class='flex-1'></view>
+</view>
+
+
+<view class='flex-row flex-center f-26 margin-20'>
+  <view class='flex-1'></view>
+  贺词温暖人心、催人奋进，我们要认真学习、深刻领会， 在新的一年里奋发有为，勇毅笃行，只争朝夕，不负韶华。 “凡事预则立，不预则废”。现在，各地都在筹备召开“两会”， 各部门各单位都在总结2019年的工作、研究2020年的工作。
+  <view class='flex-1'></view>
+</view>
+
+
+<view style='height:98rpx'></view>
+
+
+<view class='bg-white xiang'>
+  <view style='position:fixed;right:50%' class='margin-top-10'>
+    <image src='{{uploadpath}}resource/{{res.dianzan}}' class='icon-25'></image>
+  </view>
+</view>

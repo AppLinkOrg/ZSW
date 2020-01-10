@@ -31,7 +31,7 @@
 
 
 
-    <view class='f-36 txt-bold txt-black'>该程序将获取以下授权：</view>
+    <!-- <view class='f-36 txt-bold txt-black'>该程序将获取以下授权：</view>
 
     <view class='margin-top-10 flex-row'>
       <view class=' margin-top-60'>
@@ -56,7 +56,7 @@
       </view>
 
 
-    </view>
+    </view> -->
 
 
 
@@ -64,7 +64,7 @@
 
 
 
-     <!-- <checkbox-group  class='margin-top-60 '>
+     <checkbox-group  class='margin-top-60 '>
       <label class="flex-row column">
         <view class=''>
           <checkbox value="" readonly checked="{{isgrantuser==true}}" color='#4C556E' style='margin-right:25rpx' />获得你的公开信息（昵称、头像等） 
@@ -77,7 +77,7 @@
         </view>
       </label>
     </checkbox-group>
-  -->
+ 
 
     <view style='height:222rpx'></view>
 
