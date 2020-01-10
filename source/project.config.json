@@ -43,16 +43,14 @@
 			"list": []
 		},
 		"game": {
-
 			"list": []
 		},
 		"gamePlugin": {
 			"current": -1,
-
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -77,14 +75,71 @@
 				},
 				{
 					"id": -1,
-
-					"name": "我的",
-					"pathName": "pages/home/home",
-
 					"name": "pages/auth/auth",
 					"pathName": "pages/auth/auth",
-
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/guan/guan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/fenxiang/fenxiang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/shoucang/shoucang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/shoucang/shoucang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/xiangqin/xiangqin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "记录",
+					"pathName": "pages/jilu/jilu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/fenlei/fenlei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/xiangqin/xiangqin",
 					"scene": null
 				}
 			]

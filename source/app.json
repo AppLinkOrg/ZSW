@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/fenlei/fenlei",
-    
     "pages/home/home",
-    "pages/auth/auth"
+    "pages/auth/auth",
+    "pages/guan/guan",
+    "pages/fenxiang/fenxiang",
+    "pages/shoucang/shoucang",
+    "pages/xiangqin/xiangqin",
+    "pages/jilu/jilu"
   ],
   "permission": {
     "scope.userLocation": {
@@ -15,7 +19,7 @@
     "enablePullDownRefresh": true,
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
-      "navigationStyle": "custom"
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#bfbfbf",
@@ -40,13 +44,12 @@
         "img1": "images/icons/c.png",
         "img2": "images/icons/c-c.png"
       }
-      
     ]
   },
- "usingComponents": {
-  "custom-tab-bar": "/components/custom-tab-bar/index",
-  "navBar": "/components/navBar/navBar",
-  "timePicker": "/components/timePicker/timePicker"
-},
+  "usingComponents": {
+    "custom-tab-bar": "/components/custom-tab-bar/index",
+    "navBar": "/components/navBar/navBar",
+    "timePicker": "/components/timePicker/timePicker"
+  },
   "sitemapLocation": "sitemap.json"
 }

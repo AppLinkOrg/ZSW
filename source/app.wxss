@@ -452,9 +452,16 @@ button[disabled][type=primary] {
 .radius-10{
   border-radius: 20rpx;
 }
+.radius-15{
+  border-radius: 10rpx;
+}
 .icon-10{
   width: 20rpx;
   height: 20rpx;
+}
+.icon-20{
+  width: 25rpx;
+  height: 25rpx;
 }
 .icon-15{
   width: 30rpx;
@@ -484,9 +491,17 @@ button[disabled][type=primary] {
   width: 100rpx;
   height: 100rpx;
 }
+.icon-80{
+  width: 114rpx;
+  height: 114rpx;
+}
 .icon-60{
   width: 120rpx;
   height: 120rpx;
+}
+.icon-70{
+  width: 127rpx;
+  height: 127rpx;
 }
 .icon-75{
   width: 150rpx;

@@ -1,4 +1,4 @@
-import {
+  import {
   AppBase
 } from "../../appbase";
 import {
@@ -19,6 +19,15 @@ class Content extends AppBase {
     //options.id=5;
     super.onLoad(options);
     this.Base.needauth = false;
+    this.Base.setMyData({
+      StatusBar: getApp().globalData.StatusBar,
+      CustomBar: getApp().globalData.CustomBar,
+      Custom: getApp().globalData.Custom, 
+      isgrantuser: false,
+      isgrantphonenumber: false
+
+    })
+   
   }
   setPageTitle() {
     wx.setNavigationBarTitle({
@@ -27,9 +36,17 @@ class Content extends AppBase {
   }
   onMyShow() {
     var that = this;
+    var memberInfo=this.Base.getMyData().memberinfo
+
+    this.Base.setMyData({
+      memberInfo
+    })
   }
   checkPermission() {
 
+  }
+  getUserInfo(){
+    this.Base.setMyData({ isgrantuser:true})
   }
 
   checkboxChange(e) {
@@ -37,6 +54,7 @@ class Content extends AppBase {
     console.log(e);
     console.log(e.detail.value)
     var xuanze = e.detail.value;
+
     for(var i=0;i<xuanze.length;i++){
       if(xuanze[i]=='wx'){
         var aa='wx'
@@ -50,7 +68,7 @@ class Content extends AppBase {
   }
 
   detail(){
-    console.log(AppBase.UserInfo);
+    console.log(AppBase.UserInfo,'ppp');
   
     if (AppBase.UserInfo.nickName == undefined) {
       wx.showToast({
@@ -67,12 +85,14 @@ class Content extends AppBase {
       return
     }
    
-    if (AppBase.UserInfo.mobile != '' && AppBase.UserInfo.nickName != ''){
+    // if (AppBase.UserInfo.mobile != '' && AppBase.UserInfo.nickName != ''){
       wx.navigateTo({
         url: '/pages/shipin/shipin?id='+this.Base.options.id,
       })
-    }
+    // }
   }
+
+  
 
 }
 var content = new Content();

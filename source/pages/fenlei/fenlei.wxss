@@ -1,77 +1,82 @@
 /* pages/fenlei/fenlei.wxss */
-.fixed{
 
+.fixed {
   position: absolute;
 }
 
-.padd{
+.padd {
   padding: 23rpx 34rpx 19rpx 16rpx;
 }
 
-.asd{
+.asd {
   width: 26rpx;
   height: 29rpx;
 }
+
 .tab-h {
-height: 110rpx;
-width: 100%;
-box-sizing: border-box;
-overflow: hidden;
-line-height: 110rpx;
-/* background: #f7f7f7; */
-font-size: 16px;
-white-space: nowrap;
-position: fixed;
-top: 150rpx;
-left: 0;
-z-index: 99;
+  height: 160rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 160rpx;
+  /* background: #f7f7f7; */
+  font-size: 16px;
+  white-space: nowrap;
+  position: fixed;
+  top: 150rpx;
+  left: 0;
+  z-index: 99;
 }
 
 .tab-item {
-margin: 0 24rpx;
-display: inline-block;
+  margin: 0 24rpx;
+  display: inline-block;
 }
 
 .tab-item.active {
-color: black;
-position: relative;
-font-size: 36rpx;
-font-weight: bold;
+  color: black;
+  position: relative;
+  font-size: 36rpx;
+  font-weight: bold;
 }
 
 .tab-item.active:after {
-content: "";
-display: block;
-height: 8rpx;
-width: 40rpx;
-background: black;
-position: absolute;
-bottom: 0;
-left: 17rpx;
-border-radius: 16rpx;
+  content: "";
+  display: block;
+  height: 8rpx;
+  width: 40rpx;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 17rpx;
+  border-radius: 16rpx;
 }
 
-
-.zhe{
+.zhe {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 20%;
+  top: 0;
   bottom: 0;
   z-index: 1;
-  background:rgba(0,0,0,1);
+  background: rgba(0, 0, 0, 1);
   opacity: 0.7;
 }
 
-.tab-index{
+.tab-index {
   background-color: #f3f3f3;
-  border-radius:40rpx;
+  border-radius: 40rpx;
   text-align: center;
-  width: 150rpx;
+  width: 145rpx;
   height: 60rpx;
   padding-top: 5rpx;
   margin: 0 24rpx;
-   color: black;
- }
- 
- 
+  color: black;
+}
+
+.tou {
+  height: 150rpx;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+}

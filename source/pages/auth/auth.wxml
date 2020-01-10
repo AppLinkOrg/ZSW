@@ -1,50 +1,90 @@
+<view class='cu-custom'>
+  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+    <view class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <image class="asd" src="{{uploadpath}}resource/{{res.asd}}"  ></image> -->
+      <text style="color:black;margin-left:8rpx" bindtap='xiala' class=''>{{currentcity.name}}</text>
 
+    </view>
+    <view class='content' style='top:{{StatusBar}}px;color:black'>找谁玩</view>
+  </view>
+</view>
+<!-- 
+<view style="height:{{CustomBar}}px;"></view> -->
 
 <!--index.wxml-->
 
 <view style='height:100vh' class='bg-gray'>
   <view style='margin-top:160rpx;' class='text-center'>
     <image src='{{uploadpath}}inst/{{instinfo.logo}}' style='width:154rpx;height:154rpx;margin-top:190rpx;border-radius:20rpx' mode='widthFix'></image>
+    <view class='txt-black f-32 margin-top-30'>{{instinfo.name}}</view>
   </view>
 
   <view class='flex-row flex-center'>
-  <view class='flex-1'></view>
-  <view class='margin-top-97' style='height:0.5rpx;width:90%;border:1rpx solid #ccc'></view>
     <view class='flex-1'></view>
-</view>
+    <view class='margin-top-97' style='height:0.5rpx;width:90%;border:1rpx solid #ccc'></view>
+    <view class='flex-1'></view>
+  </view>
 
-<view style='height:97rpx'></view>
-  
+  <view style='height:97rpx'></view>
+
   <view class='padding-40' style='padding-top:0rpx;'>
+
+
+
     <view class='f-36 txt-bold txt-black'>该程序将获取以下授权：</view>
+
     <view class='margin-top-10 flex-row'>
       <view class=' margin-top-60'>
         <checkbox-group bindchange="checkboxChange">
           <view class='flex-row '>
-            <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='clear-button'>
-              <checkbox value='wx'style='margin-right:25rpx'></checkbox>获得你的公开信息（昵称、头像等）</button>
+
+            <view style='width:28rpx;height:28rpx;border:1rpx solid #ccc;margin-right:25rpx'></view>
+            <button value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='clear-button f-30'>
+              获得你的公开信息（昵称、头像等）</button>
           </view>
           <view class='flex-row margin-top-30'>
+
+            <view style='width:28rpx;height:28rpx;border:1rpx solid #ccc;margin-right:25rpx'></view>
             <button value='mobile' class='txt-gray f-30 clear-button' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" style='margin-right:156rpx'>
-              <checkbox value='mobile' class='margin-right-10'></checkbox>
+
               获得您微信绑定的手机号码</button>
           </view>
 
         </checkbox-group>
-        <!-- 
-          <checkbox-group bindchange="checkboxChange" class='margin-top-10'>
-         <checkbox value='mobile' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo"></checkbox>获得您微信绑定的手机号码 -->
-        <!-- <checkbox value='wx' open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='color:white'></checkbox>获得你的公开信息（昵称、头像等） -->
-        <!-- </checkbox-group>  -->
+
 
       </view>
 
 
     </view>
+
+
+
+
+
+
+
+     <!-- <checkbox-group  class='margin-top-60 '>
+      <label class="flex-row column">
+        <view class=''>
+          <checkbox value="" readonly checked="{{isgrantuser==true}}" color='#4C556E' style='margin-right:25rpx' />获得你的公开信息（昵称、头像等） 
+          <button class='clear-button'open-type="getUserInfo" bindgetuserinfo="getUserInfo"  style='width:500rpx;height:40rpx;margin-top:-40rpx;margin-left:-120rpx;'></button>
+        </view>
+
+        <view class='margin-top-10 '>
+          <checkbox readonly value="" checked="{{isgrantphonenumber==true}}" color='#4C556E'style='margin-right:25rpx'  />获得你的手机号码
+          <button class='clear-button' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" style='width:500rpx;height:40rpx;margin-top:-40rpx;margin-left:-120rpx;'></button>
+        </view>
+      </label>
+    </checkbox-group>
+  -->
+
     <view style='height:222rpx'></view>
+
+
     <view class='margin-top' bindtap="detail">
       <button class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:80rpx;height:114rpx;line-height:120rpx'>立即开启</button>
-      <!-- <button wx:if='{{aa=="mobile"}}' class='f-30 margin-top bg-white txt-black ' style='width:349rpx;border-radius:60rpx;height:114rpx;line-height:120rpx' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo">立即开启</button> -->
+
     </view>
   </view>
 </view>

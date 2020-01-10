@@ -60,9 +60,10 @@
 
   <view class='flex-row flex-center margin-right-30'>
     <view class='flex-3'></view>
-    <image src='{{uploadpath}}resource/{{res.dianzan}}' class='icon-40 '></image>
+    <image src='{{uploadpath}}resource/{{res.dianzan}}' class='icon-40' bindtap='aaa'  wx:if='{{xian==true}}' style='position:fixed;right:28rpx;margin-top:4rpx'></image>
+    <image src='{{uploadpath}}resource/{{res.zan}}' class='icon-40 ' bindtap='aaa'  wx:if='{{xian==false}}'style='position:fixed;right:28rpx;margin-top:4rpx'></image>
   </view>
-  <view class='flex-row flex-center margin-right-30'>
+  <view class='flex-row flex-center margin-right-30'style='margin-top:50rpx'>
     <view class='flex-3'></view>
     <view class='txt-white margin-right-30'>0</view>
   </view>
@@ -70,18 +71,19 @@
 
   <view class='flex-row flex-center margin-right-30 '>
     <view class='flex-3'></view>
-    <image src='{{uploadpath}}resource/{{res.zhuanfa}}' class='icon-40 '></image>
+    <image src='{{uploadpath}}resource/{{res.zhuanfa}}' class='icon-40 ' bindtap='fen' id='{{item.id}}'></image>
   </view>
-  <view class='flex-row flex-center margin-right-30'>
-    <view class='flex-3'></view>
-    <view class='txt-white'>{{xiangqinlist.fenxiang}}</view>
+  <!-- <button open-type='share'  class='clear-button'></button>  -->
+  <view class='flex-row flex-center margin-right-20'>
+    <view class='flex-1'></view>
+    <view class='txt-white margin-right-30'>{{xiangqinlist.fenxiang}}</view>
+
   </view>
 
   <view style='height:2vh'></view>
-  <view></view>
+
   <view class='txt-white padding f-36'>{{xiangqinlist.name}}</view>
   <view class='flex-row flex-center margin-left-10'>
-    <view class='flex-1'></view>
     <view class='txt-white padding-5' wx:for="{{xiangqinlist.departmentlist}}">
       <text style='color:white;padding-right:28rpx'>#{{item.name}}#</text>{{xiangqinlist.jianjie}}</view>
     <view class='flex-1'></view>

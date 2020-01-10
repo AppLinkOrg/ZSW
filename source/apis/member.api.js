@@ -297,6 +297,38 @@ export class MemberApi{
         })
     }
 
+    updateauth(json, callback, showLoading = true) {
+
+        if (showLoading)
+            ApiConfig.ShowLoading();
+
+        var header = ApiConfig.GetHeader();
+        console.log(header);
+        console.log(json);
+        wx.request({
+            url: ApiConfig.GetApiUrl() + 'member/updateauth',
+            data: json,
+            method: 'POST',
+            dataType: 'json',
+            header: header,
+            success: function (res) {
+                if (callback != null) {
+                    callback(res.data);
+                }
+            },
+            fail: function (res) {
+                console.log(res);
+                callback(false);
+            },
+            complete: function (res) {
+                console.log(res);
+            
+                if (showLoading)
+                    ApiConfig.CloseLoading();
+            }
+        })
+    }
+
     updatelocation(json, callback, showLoading = true) {
 
         if (showLoading)
@@ -393,7 +425,7 @@ export class MemberApi{
         })
     }
 
-    updateauth(json, callback, showLoading = true) {
+    banben(json, callback, showLoading = true) {
 
         if (showLoading)
             ApiConfig.ShowLoading();
@@ -402,7 +434,7 @@ export class MemberApi{
         console.log(header);
         console.log(json);
         wx.request({
-            url: ApiConfig.GetApiUrl() + 'member/updateauth',
+            url: ApiConfig.GetApiUrl() + 'member/banben',
             data: json,
             method: 'POST',
             dataType: 'json',

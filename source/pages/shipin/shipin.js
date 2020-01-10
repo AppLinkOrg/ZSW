@@ -22,8 +22,10 @@ class Content extends AppBase {
     this.Base.Page = this;
     //options.id=5;
     var show=1;
+    var xian=true;
     this.Base.setMyData({
-      show
+      show,
+      xian
     })
     super.onLoad(options);
   }
@@ -43,6 +45,11 @@ console.log('所得税')
        
     })
  }
+ fen(){
+   wx.navigateTo({
+     url: '/pages/fenxiang/fenxiang?id=' + this.Base.options.id,
+   })
+ }
 
 
   aa(e){
@@ -54,6 +61,18 @@ console.log('所得税')
     })
   }
 
+  aaa(e) {
+    var type = e.currentTarget.id;
+    console.log(e, '节点值', type, '获取节点值');
+  var ss=this.Base.getMyData().xian;
+  ss=!ss
+
+    this.Base.setMyData({
+      xian: ss
+    })
+  }
+ 
+
 }
 
 var content = new Content();
@@ -62,4 +81,7 @@ body.onLoad = content.onLoad;
 
 body.onMyShow = content.onMyShow;
 body.aa=content.aa;
+body.fen=content.fen;
+body.aaa=content.aaa;
+
 Page(body)

@@ -201,7 +201,7 @@ export class AppBase {
             success: userres => {
               AppBase.UserInfo = userres.userInfo;
               console.log(userres);
-
+            
               var memberapi = new MemberApi();
               memberapi.getuserinfo({
                 code: res.code,
@@ -215,6 +215,7 @@ export class AppBase {
                 ApiConfig.SetToken(data.openid);
                 console.log("goto update info");
                 //this.loadtabtype();
+                
 
 
                 memberapi.update(AppBase.UserInfo, () => {
@@ -222,6 +223,7 @@ export class AppBase {
                   console.log(AppBase.UserInfo);
                   that.Base.setMyData({
                     UserInfo: AppBase.UserInfo
+                   
                   });
 
                   // that.checkPermission();
@@ -291,7 +293,7 @@ export class AppBase {
                 AppBase.UserInfo = userres.userInfo;
                 console.log('哈哈哈哈哈哈')
                 console.log(userres);
-
+            
                 var memberapi = new MemberApi();
                 memberapi.getuserinfo({
                   code: res.code,
@@ -420,6 +422,8 @@ export class AppBase {
     });
   }
   phonenoCallback(phoneno, e) {
+    
+    this.Base.setMyData({ isgrantphonenumber: true})
     console.log("phone no callback");
     console.log(phoneno);
     console.log(e);

@@ -1,4 +1,52 @@
+<view class='cu-custom'>
+  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+    <view class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <!-- <image class="asd" src="{{uploadpath}}resource/{{res.fanhui}}" bindtap='hui'></image> -->
+
+    </view>
+    <view class='content' style='top:{{StatusBar}}px;color:black'>我的</view>
+  </view>
+</view>
+
+<view style="height:{{CustomBar}}px;"></view>
+<image src="{{uploadpath}}resource/{{res.ju}}" style='width:100%;position:fixed;height:11vh;z-index:-1'></image>
+<!-- <view style='height:100rpx'></view> -->
+
+<view class='flex-row flex-center margin-left-50'>
+  <!-- <image src='{{memberInfo.avatarUrl}}' class='radius-50 icon-75'></image> -->
+   <image class='icon ' src='{{uploadpath}}resource/{{res.zan}}'class='radius-50 icon-80' ></image>
+  <view class='txt-black f-32 margin-left-20'>{{memberInfo.nickName}}dsvdfs</view>
+</view>
 
 
-<view style="height:200rpx"></view>
+
+<view class='bg-white margin-20 radius-8 radius-10' style='margin-top:100rpx'>
+
+
+  <view class='flex-row  flex-center margin-block' bindtap="shou">
+    <image  src='{{uploadpath}}resource/{{res.cang}}' style='width:28rpx;height:26rpx' ></image>
+    <view class=' flex-1 margin-left-20  txt-black txt-bold h'>我的收藏</view>
+    <image style='width:13rpx;height:22rpx' src='{{uploadpath}}resource/{{res.you}}'></image>
+  </view>
+
+  <view class='flex-row  flex-center margin-block' bindtap="guan">
+    <image  src='{{uploadpath}}resource/{{res.kan}}' style='width:28rpx;height:26rpx' ></image>
+    <view class=' flex-1 margin-left-20  txt-black txt-bold h'>观看记录</view>
+    <image style='width:13rpx;height:22rpx' src='{{uploadpath}}resource/{{res.you}}'></image>
+  </view>
+
+  <view class='flex-row  flex-center margin-block' bindtap="dian">
+    <image  src='{{uploadpath}}resource/{{res.guan}}' style='width:28rpx;height:26rpx' ></image>
+    <view class=' flex-1 margin-left-20  txt-black txt-bold h'>关于我们</view>
+    <image style='width:13rpx;height:22rpx' src='{{uploadpath}}resource/{{res.you}}'></image>
+  </view>
+  <!-- bindtap='phoneCall' id='{{instinfo.instmobile}}' -->
+
+  <button class='flex-row  flex-center under-block clear-button' open-type='contact' bindtap='cc'>
+    <image  src='{{uploadpath}}resource/{{res.lian}}' style='width:28rpx;height:26rpx' ></image>
+    <view class=' flex-1 margin-left-20  txt-black txt-bold h'>联系客服</view>
+    <image style='width:13rpx;height:22rpx' src='{{uploadpath}}resource/{{res.you}}'></image>
+  </button>
+
+</view>
 <custom-tab-bar></custom-tab-bar>
