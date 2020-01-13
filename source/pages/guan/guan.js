@@ -33,19 +33,18 @@ class Content extends AppBase {
     var instapi = new InstApi();
     var memberapi = new MemberApi();
 
-    memberapi.banben({}, (banbenlist) => {
+    memberapi.aboutus({}, (aboutus) => {
       this.Base.setMyData({
-        banbenlist
+        aboutus
       })
     })
   }
   hui() {
-   
       wx.navigateBack({
-        delta:2
+      
       })
-
   }
+  
 }
 
 

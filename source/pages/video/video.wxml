@@ -30,11 +30,7 @@
 	</view>
 </view>
 
-
-
-
-
-
+ 
 
 <view hidden="{{videolength==0}}" class="videobody" bindtouchstart="touchStart" bindtouchend="touchEnd">
   <swiper class="videobody" bindchange="videochange" vertical='{{true}}' circular='{{current>0&&current<videolength-1}}'  >

@@ -47,7 +47,9 @@ class Content extends AppBase {
     if(currentfenlei.id!=0){
       cond.fenlei_id=currentfenlei.id;
     }
+    
     var memberapi = new MemberApi();
+
     memberapi.video(cond, (videolist) => {
       this.Base.setMyData({
         videolist
@@ -136,15 +138,10 @@ class Content extends AppBase {
 
     console.log(e)
  }
-  dian(e){
-    console.log(e)
-    wx.navigateTo({
-      url: '/pages/auth/auth?id=' + e.currentTarget.id,
-    })
-
-    //   wx.navigateTo({
-    //     url: '/pages/video/video?id=' + e.currentTarget.id,
-    //  })
+  dian(e){ 
+      wx.navigateTo({
+        url: '/pages/video/video?id=' + e.currentTarget.id,
+     })
   }
 
 }

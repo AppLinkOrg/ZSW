@@ -370,6 +370,9 @@ button[disabled][type=primary] {
 .margin-bottom-40{
   margin-bottom:40rpx;
 }
+.height-20{
+  height: 20rpx;
+}
 .height-40{
   height: 40rpx;
 }

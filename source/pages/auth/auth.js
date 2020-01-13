@@ -42,54 +42,18 @@ class Content extends AppBase {
       memberInfo
     })
   }
-  checkPermission() {
-
-  }
+  
   getUserInfo(){
+    AppBase.UserInfo.openid = undefined;
     this.Base.setMyData({ isgrantuser:true})
   }
 
-  checkboxChange(e) {
-    console.log(e.detail.value)
-    console.log(e);
-    console.log(e.detail.value)
-    var xuanze = e.detail.value;
-
-    for(var i=0;i<xuanze.length;i++){
-      if(xuanze[i]=='wx'){
-        var aa='wx'
-      }else if(xuanze[i]=='mobile'){
-        var aa = 'mobile'
-      }
-    }
-    this.Base.setMyData({
-      xuanze: xuanze,aa
-    })
-  }
+ 
 
   detail(){
-    console.log(AppBase.UserInfo,'ppp');
-  
-    // if (AppBase.UserInfo.nickName == undefined) {
-    //   wx.showToast({
-    //     title: '请进行微信授权',
-    //     icon: 'none'
-    //   })
-    //   return
-    // }
-    // if (AppBase.UserInfo.mobile==undefined){
-    //   wx.showToast({
-    //     title: '请绑定手机号码',
-    //     icon:'none'
-    //   })
-    //   return
-    // }
-   
-    // if (AppBase.UserInfo.mobile != '' && AppBase.UserInfo.nickName != ''){
-      wx.navigateTo({
-        url: '/pages/shipin/shipin?id='+this.Base.options.id,
-      })
-    // }
+    console.log(AppBase.UserInfo,'ppp'); 
+      wx.navigateBack({ 
+      }) 
   }
 
   

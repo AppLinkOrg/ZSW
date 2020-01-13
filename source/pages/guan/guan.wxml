@@ -1,48 +1,49 @@
-
 <view class='cu-custom'>
   <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
     <view class='action' open-type="navigateBack" delta="1" hover-class="none">
-      <image class="asd" src="{{uploadpath}}resource/{{res.fanhui}}"   bindtap='hui' ></image>
+      <image class="asd" src="{{uploadpath}}resource/{{res.fanhui}}" bindtap='hui'></image>
       <!-- <text style="color:black;margin-left:8rpx" bindtap='xiala' class=''>{{currentcity.name}}</text> -->
 
     </view>
-    <view class='content' style='top:{{StatusBar}}px;color:black'>关于我们</view>
+    <view class='content txt-bold' style='top:{{StatusBar}}px;color:black'>关于我们</view>
   </view>
 </view>
 
-<!-- <view style="height:{{CustomBar}}px;"></view> -->
+
 
 <!--index.wxml-->
 
-<view>
-  <view style='margin-top:160rpx;' class='text-center'>
-    <image src='{{uploadpath}}inst/{{instinfo.logo}}' style='width:154rpx;height:154rpx;margin-top:190rpx;border-radius:20rpx' mode='widthFix'></image>
-    <view class='f-32 margin-top-30'wx:for='{{banbenlist}}' wx:key='s'>{{item.name}}</view>
-  </view>
+
+<view style='margin-top:100rpx;' class='text-center bg-white'>
+  <view style="height:{{CustomBar}}px;"></view>
+  <image src='{{uploadpath}}aboutus/{{aboutus.logo}}' class="logo" mode='widthFix'></image>
+  <view class="txt-black margin-top-20">{{aboutus.inst_name}}</view>
+  <view class='h6 margin-top-5'>{{aboutus.version}}</view>
+  <view class="height-40 "></view>
 </view>
 
 
-<view class='bg-white margin-20 radius-8 margin-top-80 radius-10'>
 
-
+<view class='bg-white margin-20 radius-8   radius-10'>
+ 
   <view class='flex-row  flex-center margin-block'>
-    <view class=' flex-1 margin-left-20  txt-gray  h'>公众号</view>
-    <view class='txt-black '>{{instinfo.name}}</view>
+    <view class=' flex-1    txt-gray  h5'>公众号</view>
+    <view class='txt-black h5'>{{aboutus.subscription}}</view>
   </view>
 
   <view class='flex-row  flex-center margin-block'>
-    <view class=' flex-1 margin-left-20  txt-gray  h'>邮箱</view>
-    <view class='txt-black'>{{instinfo.youxiang}}</view>
+    <view class=' flex-1    txt-gray  h5'>邮箱</view>
+    <view class='txt-black h5'>{{aboutus.email}}</view>
   </view>
 
   <view class='flex-row  flex-center margin-block'>
-    <view class=' flex-1 margin-left-20  txt-gray  h'>管理员微信</view>
-    <view class='txt-black'>{{instinfo.weixin}}</view>
+    <view class=' flex-1    txt-gray  h5'>管理员微信</view>
+    <view class='txt-black h5'>{{aboutus.wechat}}</view>
   </view>
 
   <view class='flex-row  flex-center under-block'>
-    <view class=' flex-1 margin-left-20  txt-gray  h'>官方电话</view>
-    <view class='txt-black'>{{instinfo.customerservicemobile}}</view>
+    <view class=' flex-1    txt-gray  h5'>官方电话</view>
+    <view class='txt-black h5'>{{aboutus.mobile}}</view>
   </view>
 
 </view>

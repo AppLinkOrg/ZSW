@@ -14,13 +14,15 @@
 
 <view class='flex-row flex-center margin-left-50'>
   <!-- <image src='{{memberInfo.avatarUrl}}' class='radius-50 icon-75'></image> -->
-   <image class='icon ' src='{{uploadpath}}resource/{{res.zan}}'class='radius-50 icon-80' ></image>
-  <view class='txt-black f-32 margin-left-20'>{{memberInfo.nickName}}dsvdfs</view>
+   <image class='icon-50 radius-50' wx:if='{{memberinfo!=null&&memberinfo.avatarUrl!=""}}' src='{{memberinfo.avatarUrl}}' ></image>
+   <image class='icon-50 radius-50' wx:if='{{memberinfo==null||memberinfo.avatarUrl==""}}' src="{{uploadpath}}resource/{{res.nologin}}"></image>
+  <view class='txt-black f-32 margin-left-20'>{{memberinfo.nickName}}</view>
+  <view class='txt-black f-32 margin-left-20' wx:if='{{memberinfo==null}}'>未登录</view>
 </view>
 
 
 
-<view class='bg-white margin-20 radius-8 radius-10' style='margin-top:100rpx'>
+<view class='bg-white margin-20  radius-10' style='margin-top:120rpx'>
 
 
   <view class='flex-row  flex-center margin-block' bindtap="shou">

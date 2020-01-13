@@ -17,33 +17,33 @@
   <view class='flex-1'>
   </view>
 
- <view class='bg-white radius-10' style='width:629rpx;position:fixed;top:255rpx;left:60rpx;'>
+  <view class='bg-white radius-10' style='width:629rpx;position:fixed;top:255rpx;left:60rpx;'>
 
- <image src='{{uploadpath}}video/{{xiangqinlist.tupian}}' style='width:570rpx;height:680rpx' class='mar'></image>
+    <image src='{{uploadpath}}video/{{xiangqinlist.tupian}}' style='width:570rpx;height:680rpx' class='mar'></image>
 
-  <view class='flex-row' style='width:367rpx'>
- <image src='{{uploadpath}}video/{{xiangqinlist.touxiang}}' class='icon-40 border-raidus-50 margin-left-30' style='margin-top:-20rpx;'></image>
- <view class='flex-row flex-center'>
- <view class='txt-black f-28'>{{xiangqinlist.name}}</view>
-  <view class='flex-1'></view>
-    <image src='{{uploadpath}}video/{{xiangqinlist.touxiang}}' class='icon-70 margin-top' style='position:fixed;right:90rpx'></image>
-    <!-- <canvas class="canvas-code"canvas-id="myQrcode" style="background:#fff;width: 200px;height: 200px;" class='icon-70 margin-top' style='position:fixed;right:90rpx'/> -->
+    <view class='flex-row' style='width:367rpx'>
+      <image src='{{uploadpath}}video/{{xiangqinlist.touxiang}}' class='icon-40 border-raidus-50 margin-left-30' style='margin-top:-20rpx;'></image>
+      <view class='flex-row flex-center'>
+        <view class='txt-black f-28'>{{xiangqinlist.name}}</view>
+        <view class='flex-1'></view>
+        <image src='{{uploadpath}}video/{{xiangqinlist.touxiang}}' class='icon-70 margin-top' style='position:fixed;right:90rpx'></image>
+        <!-- <canvas class="canvas-code"canvas-id="myQrcode" style="background:#fff;width: 200px;height: 200px;" class='icon-70 margin-top' style='position:fixed;right:90rpx'/> -->
+      </view>
     </view>
+    <view class='txt-black margin-20 h6 txt-gray margin-left-30' style='width:367rpx'>{{xiangqinlist.jianjie}}</view>
+
+  </view>
+
+  <view class='flex-row' style='position:fixed;bottom:20%;line-height:70rpx'>
+    <view class='bg-white txt-black text-center' style='width:260rpx;height:85rpx;border-radius:43rpx;margin:0rpx 32rpx 0rpx 77rpx' bindtap='save'>
+      <image src='{{uploadpath}}resource/{{res.bao}}' class='icon-20'></image>
+      保存图片</view>
+
+    <view class='bg-white txt-black ' style='width:260rpx;height:85rpx;border-radius:43rpx;line-height:70rpx'>
+      <button open-type='share' class='clear-button' style='padding-left:40rpx'>
+        <image src='{{uploadpath}}resource/{{res.zhuan}}' class='icon-20'></image>
+        转发好友</button>
     </view>
- <view class='txt-black margin-20 h6 txt-gray margin-left-30' style='width:367rpx'>{{xiangqinlist.jianjie}}</view>
- 
-   </view>
-
-<view class='flex-row' style='position:fixed;bottom:20%;line-height:70rpx'>
-<view class='bg-white txt-black text-center' style='width:260rpx;height:85rpx;border-radius:43rpx;margin:0rpx 32rpx 0rpx 77rpx' bindtap='save'>
-<image src='{{uploadpath}}resource/{{res.bao}}' class='icon-20'></image>
-保存图片</view> 
-
-<view class='bg-white txt-black ' style='width:260rpx;height:85rpx;border-radius:43rpx;line-height:70rpx'>
-<button open-type='share'  class='clear-button' style='padding-left:40rpx'> 
-<image src='{{uploadpath}}resource/{{res.zhuan}}' class='icon-20'></image>
-转发好友</button></view>
-</view>
+  </view>
 
 </view>
-

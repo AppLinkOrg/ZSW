@@ -158,7 +158,7 @@ export class AppBase {
   onReady() {
     console.log("onReady");
   }
-  minimm
+ 
   onShow() {
     var that = this;
     var instapi = new InstApi();
@@ -281,77 +281,72 @@ export class AppBase {
 
   }
 
-  getUserInfo() {
-    var that = this;
-    var memberapi = new MemberApi();
-    wx.login({
-          success: res => {
-            // 发送 res.code 到后台换取 openId, sessionKey, unionId
-            console.log(res);
-            wx.getUserInfo({
-              success: userres => {
-                AppBase.UserInfo = userres.userInfo;
-                console.log('哈哈哈哈哈哈')
-                console.log(userres);
+  // getUserInfo() {
+  //   var that = this;
+  //   var memberapi = new MemberApi();
+  //   wx.login({
+  //         success: res => {
+  //           // 发送 res.code 到后台换取 openId, sessionKey, unionId
+  //           console.log(res);
+  //           wx.getUserInfo({
+  //             success: userres => {
+  //               AppBase.UserInfo = userres.userInfo;
+  //               console.log('哈哈哈哈哈哈')
+  //               console.log(userres);
             
-                var memberapi = new MemberApi();
-                memberapi.getuserinfo({
-                  code: res.code,
-                  grant_type: "authorization_code"
-                }, data => {
-                  console.log("here");
-                  console.log(data);
-                  AppBase.UserInfo.openid = data.openid;
-                  AppBase.UserInfo.session_key = data.session_key;
-                  console.log(AppBase.UserInfo);
-                  ApiConfig.SetToken(data.openid);
-                  console.log("goto update info");
-                  memberapi.update(AppBase.UserInfo, (ret) => {
-                    console.log("member update");
-                    console.log(ret);
-                  });
+  //               var memberapi = new MemberApi();
+  //               memberapi.getuserinfo({
+  //                 code: res.code,
+  //                 grant_type: "authorization_code"
+  //               }, data => {
+  //                 console.log("here");
+  //                 console.log(data);
+  //                 AppBase.UserInfo.openid = data.openid;
+  //                 AppBase.UserInfo.session_key = data.session_key;
+  //                 console.log(AppBase.UserInfo);
+  //                 ApiConfig.SetToken(data.openid);
+  //                 console.log("goto update info");
+  //                 memberapi.update(AppBase.UserInfo, (ret) => {
+  //                   console.log("member update");
+  //                   console.log(ret);
+  //                 });
                   
-                  console.log(AppBase.UserInfo);
-                  that.Base.setMyData({
-                    UserInfo: AppBase.UserInfo
-                  });
-                  that.onMyShow();
+  //                 console.log(AppBase.UserInfo);
+  //                 that.Base.setMyData({
+  //                   UserInfo: AppBase.UserInfo
+  //                 });
+  //                 that.onMyShow();
 
-                  //that.Base.getAddress();
-                });
-              },
-              fail: res => {
-                console.log(res);
-                //that.Base.gotoOpenUserInfoSetting();
-                if (this.Base.needauth == true) {
-                  wx.redirectTo({
-                    url: '/pages/auth/auth',
-                  });
-                } else {
-                  that.onMyShow();
-                }
-                //that.Base.getAddress();
-              }
-            });
-          }
-        })
-  }
+  //                 //that.Base.getAddress();
+  //               });
+  //             },
+  //             fail: res => {
+  //               console.log(res);
+  //               //that.Base.gotoOpenUserInfoSetting();
+  //               if (this.Base.needauth == true) {
+  //                 wx.redirectTo({
+  //                   url: '/pages/auth/auth',
+  //                 });
+  //               } else {
+  //                 that.onMyShow();
+  //               }
+  //               //that.Base.getAddress();
+  //             }
+  //           });
+  //         }
+  //       })
+  // }
   checkPermission() {
     console.log("那真的牛皮");
     var memberapi = new MemberApi();
     var that = this;
     memberapi.info({}, (info) => {
-      if ((info==null||info.mobile == "") && this.Base.needauth == true) {
-        wx.navigateTo({
-          // url: '/pages/auth/auth',
-        })
-      } else {
-
+      
         this.Base.setMyData({
           memberinfo: info
         });
         that.onMyShow();
-      }
+      
     });
    
   }

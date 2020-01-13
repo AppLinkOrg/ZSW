@@ -1,153 +1,160 @@
 {
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "enhance": true,
-    "postcss": true,
-    "minified": true,
-    "newFeature": true,
-    "coverView": true,
-    "autoAudits": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "showShadowRootInWxmlPanel": true
-  },
-  "compileType": "miniprogram",
-  "libVersion": "2.9.4",
-  "libVersion": "2.10.0",
-  "appid": "wxfffd6d41411c4224",
-  "projectname": "%E6%89%BE%E8%B0%81%E7%8E%A9",
-  "cloudfunctionTemplateRoot": "",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "plugin": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "current": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "current": 12,
-      "list": [
-        {
-          "id": -1,
-          "name": "我的",
-          "pathName": "pages/mine/mine",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "授权",
-          "pathName": "pages/fenlei/fenlei",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/shipin/shipin",
-          "pathName": "pages/shipin/shipin",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "pages/auth/auth",
-          "pathName": "pages/auth/auth",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "我的",
-          "pathName": "pages/home/home",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "关于我们",
-          "pathName": "pages/guan/guan",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "分享",
-          "pathName": "pages/fenxiang/fenxiang",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "收藏",
-          "pathName": "pages/shoucang/shoucang",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "收藏",
-          "pathName": "pages/shoucang/shoucang",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "详情",
-          "pathName": "pages/xiangqin/xiangqin",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "记录",
-          "pathName": "pages/jilu/jilu",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "详情",
-          "pathName": "pages/fenlei/fenlei",
-          "query": "",
-          "scene": null
-        },
-        {
-          "id": -1,
-          "name": "详情",
-          "pathName": "pages/xiangqin/xiangqin",
-          "scene": null
-        }
-      ]
-    }
-  }
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"showShadowRootInWxmlPanel": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.0",
+	"appid": "wxfffd6d41411c4224",
+	"projectname": "%E6%89%BE%E8%B0%81%E7%8E%A9",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 13,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/fenlei/fenlei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shipin/shipin",
+					"pathName": "pages/shipin/shipin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/auth/auth",
+					"pathName": "pages/auth/auth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/guan/guan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/fenxiang/fenxiang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/shoucang/shoucang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/shoucang/shoucang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/xiangqin/xiangqin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "记录",
+					"pathName": "pages/jilu/jilu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情",
+					"pathName": "pages/fenlei/fenlei",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/video/video",
+					"pathName": "pages/video/video",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
 }

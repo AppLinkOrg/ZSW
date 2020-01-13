@@ -81,6 +81,11 @@ class Content extends AppBase {
 
   onMyShow() {
     var that = this;
+    if (this.Base.getMyData().memberinfo == null || this.Base.getMyData().memberinfo.nickName ==''){
+      this.Base.setMyData({ lockup:true})
+    }else{
+      this.Base.setMyData({ lockup: false })
+    }
   }
 
   last = 0;
@@ -218,6 +223,14 @@ class Content extends AppBase {
     this.Base.time = 0;
   }
   iknow(){
+    console.log(this.Base.getMyData().lockup,'锁')
+    //return;
+    if (this.Base.getMyData().lockup==true){
+     wx.navigateTo({
+       url: '/pages/auth/auth',
+     })
+     return;
+    }
     wx.setStorageSync("iknowvideotips","1");
     console.log("iknowwhat");
     this.Base.setMyData({show:0});
