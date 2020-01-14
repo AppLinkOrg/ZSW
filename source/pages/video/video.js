@@ -181,8 +181,19 @@ class Content extends AppBase {
     return curr >= last;
   }
   videoplay(e) {
-    var id = e.currentTarget.id;
+    var id = e.currentTarget.dataset.id;
+    var member_id = e.currentTarget.dataset.member_id;
+    console.log(id, '路口監控', member_id);
+  //return;
+    var memberapi=new MemberApi();
+    memberapi.addliulang({
+      video_id: id
+     
+    }, (addliulang)=>{
+
+    })
     console.log(id + " video  played aa");
+    
   }
   videopause(e) {
     var id = e.currentTarget.id;
@@ -331,6 +342,12 @@ class Content extends AppBase {
   }
 
   addcount(e){
+    var memberapi = new MemberApi();
+    memberapi.addcount({
+      video_id: e.currentTarget.id
+    }, (addcount)=>{
+    
+    })
 
   }
 

@@ -36,52 +36,52 @@
 
     <swiper-item class="videobody">
 
-      <video id="video0" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
+      <video id="video0" data-id='{{url0.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
 
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav' id='{{url0.id}}' data-type="Y" wx:if="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
         <cover-image bindtap='fav' id='{{url0.id}}' data-type="N" wx:if="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5 margin-top-10">1.8W{{}}</cover-view>
-        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5 margin-top-10">5000</cover-view>
+        <cover-view class="txt-white h5 margin-top-10">{{url0.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url0.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5 margin-top-10">{{url0.fenxiang}}</cover-view>
       </cover-view>
 
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video id="video1" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
+      <video id="video1" data-id='{{url1.id}}'  data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav2' id='{{url1.id}}' data-type="Y" wx:if="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
         <cover-image bindtap='fav2' id='{{url1.id}}' data-type="N" wx:if="{{url1.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5">1.8W{{}}</cover-view>
-        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5">5000</cover-view>
+        <cover-view class="txt-white h5">{{url1.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}"  bindtap="addcount" id="{{url1.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url1.fenxiang}}</cover-view>
       </cover-view>
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video id="video2" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
+      <video id="video2" data-id='{{url2.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav3' id='{{url2.id}}' data-type="Y" wx:if="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
         <cover-image bindtap='fav3' id='{{url2.id}}' data-type="N" wx:if="{{url2.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5">1.8W{{}}</cover-view>
-        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5">5000</cover-view>
+        <cover-view class="txt-white h5">{{url2.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}"  bindtap="addcount" id="{{url2.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url2.fenxiang}}</cover-view>
       </cover-view>
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video id="video3" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url3.vod}}"> </video>
+      <video id="video3" data-id='{{url3.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url3.vod}}"> </video>
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav4' id='{{url3.id}}' data-type="Y" wx:if="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
         <cover-image bindtap='fav4' id='{{url3.id}}' data-type="N" wx:if="{{url3.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5">1.8W{{}}</cover-view>
-        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" class="icon-40 margin-top"></cover-image>
-        <cover-view class="txt-white h5">5000</cover-view>
+        <cover-view class="txt-white h5">{{url3.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url3.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url3.fenxiang}}</cover-view>
       </cover-view>
     </swiper-item>
   </swiper>
