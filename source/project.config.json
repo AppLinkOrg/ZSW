@@ -54,7 +54,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -152,6 +152,19 @@
 					"name": "pages/video/video",
 					"pathName": "pages/video/video",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/xiangqin/xiangqin",
+					"pathName": "pages/xiangqin/xiangqin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shoucang/shoucang",
+					"pathName": "pages/shoucang/shoucang",
 					"scene": null
 				}
 			]

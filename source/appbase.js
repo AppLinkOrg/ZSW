@@ -116,9 +116,7 @@ export class AppBase {
       download: base.download,
       checkPermission: base.checkPermission,
       getUserInfo: base.getUserInfo
-
-
-
+ 
     }
   }
   log() {
@@ -129,12 +127,17 @@ export class AppBase {
     console.log(options);
     console.log("onload");
     this.Base.setBasicInfo();
+    
     this.Base.setMyData({
       options: options
     });
+ 
 
     ApiConfig.SetUnicode(this.Base.unicode);
+
   }
+
+
   gotoOpenUserInfoSetting() {
     var that = this;
     wx.showModal({

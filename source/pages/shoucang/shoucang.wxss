@@ -5,6 +5,12 @@
 page {
   background: #f2f2f2;
 }
-.pas{
-  margin: 0rpx 0rpx 19rpx 16rpx
+.image {
+  width: 278rpx !important;
+  height: 192rpx !important;
+}
+.block{
+   margin-left: 20rpx;
+   margin-right: 20rpx;
+   margin-top: 20rpx;
 }

@@ -3,9 +3,10 @@
   height: 29rpx;
 }
 .xiang{
-  width:100vh;
-  height:98rpx;
   position:fixed;
-  bottom:0;
-  box-shadow:0px 0px 21px 0px rgba(0, 0, 0, 0.08);
+   bottom:0;
+  width:100vw;
+  height:98rpx;
+   line-height: 98rpx;
+  box-shadow:0cm 0 21rpx 0 rgba(0, 0, 0, 0.08);
 }

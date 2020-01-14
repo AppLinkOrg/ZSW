@@ -1,50 +1,88 @@
-
 <view class='ceng' style='height:100vh;width:100vw' wx:if='{{show=="1"}}'>
 
 
-	<view class='flex-row flex-center' style='margin-top:530rpx;'>
-		<view class='flex-1'></view>
-		<view class='txt-white margin-right-40 f-28'>左滑返回列表</view>
-		<image src='{{uploadpath}}resource/{{res.zuoyou}}' class='icon-75 margin-top-97'></image>
-		<view class='txt-white margin-left-40 f-28'>右滑查看攻略</view>
-		<view class='flex-1'></view>
-	</view>
+  <view class='flex-row flex-center' style='margin-top:530rpx;'>
+    <view class='flex-1'></view>
+    <view class='txt-white margin-right-40 f-28'>左滑返回列表</view>
+    <image src='{{uploadpath}}resource/{{res.zuoyou}}' class='icon-75 margin-top-97'></image>
+    <view class='txt-white margin-left-40 f-28'>右滑查看攻略</view>
+    <view class='flex-1'></view>
+  </view>
 
-	<view style='height:88rpx'></view>
+  <view style='height:88rpx'></view>
 
-	<view class='flex-row flex-column'>
-		<view class='flex-1'></view>
-		<image src='{{uploadpath}}resource/{{res.shang}}' style='width:25rpx;height:48rpx'></image>
-		<view class='txt-white margin-top-30 f-28'>上、下滑刷新视频</view>
-		<image src='{{uploadpath}}resource/{{res.shou}}' class='margin-left-100' style='width:62rpx ;height:52rpx'></image>
-		<image src='{{uploadpath}}resource/{{res.xiahua}}' style='width:25rpx;height:48rpx'></image>
-		<view class='flex-1'></view>
-	</view>
+  <view class='flex-row flex-column'>
+    <view class='flex-1'></view>
+    <image src='{{uploadpath}}resource/{{res.shang}}' style='width:25rpx;height:48rpx'></image>
+    <view class='txt-white margin-top-30 f-28'>上、下滑刷新视频</view>
+    <image src='{{uploadpath}}resource/{{res.shou}}' class='margin-left-100' style='width:62rpx ;height:52rpx'></image>
+    <image src='{{uploadpath}}resource/{{res.xiahua}}' style='width:25rpx;height:48rpx'></image>
+    <view class='flex-1'></view>
+  </view>
 
-	<view style='height:109rpx'></view>
+  <view style='height:109rpx'></view>
 
-	<view class='flex-row flex-center'>
-		<view class='flex-1'></view>
-		<view class='txt-white text-center padding-top-20 f-28' bindtap='iknow' style='border-radius:40px;border:1rpx solid #ccc;width:308rpx;height:80rpx'>我知道了</view>
-		<view class='flex-1'></view>
-	</view>
+  <view class='flex-row flex-center'>
+    <view class='flex-1'></view>
+    <view class='txt-white text-center padding-top-20 f-28' bindtap='iknow' style='border-radius:40px;border:2rpx solid #ccc;width:308rpx;height:80rpx'>我知道了</view>
+    <view class='flex-1'></view>
+  </view>
 </view>
 
- 
+
 
 <view hidden="{{videolength==0}}" class="videobody" bindtouchstart="touchStart" bindtouchend="touchEnd">
-  <swiper class="videobody" bindchange="videochange" vertical='{{true}}' circular='{{current>0&&current<videolength-1}}'  >
+  <swiper class="videobody" bindchange="videochange" vertical='{{true}}' circular='{{current>0&&current<videolength-1}}'>
+
     <swiper-item class="videobody">
-      <video id="video0" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}"  enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
+
+      <video id="video0" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
+
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
+        <cover-image bindtap='fav' id='{{url0.id}}' data-type="Y" wx:if="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav' id='{{url0.id}}' data-type="N" wx:if="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5 margin-top-10">1.8W{{}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5 margin-top-10">5000</cover-view>
+      </cover-view>
+
     </swiper-item>
+
     <swiper-item class="videobody">
-      <video id="video1" bindplay="videoplay" bindpause="videopause"  controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
+      <video id="video1" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
+        <cover-image bindtap='fav2' id='{{url1.id}}' data-type="Y" wx:if="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav2' id='{{url1.id}}' data-type="N" wx:if="{{url1.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">1.8W{{}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">5000</cover-view>
+      </cover-view>
     </swiper-item>
+
     <swiper-item class="videobody">
-      <video id="video2" bindplay="videoplay" bindpause="videopause"  controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}"  enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
+      <video id="video2" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
+        <cover-image bindtap='fav3' id='{{url2.id}}' data-type="Y" wx:if="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav3' id='{{url2.id}}' data-type="N" wx:if="{{url2.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">1.8W{{}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">5000</cover-view>
+      </cover-view>
     </swiper-item>
+
     <swiper-item class="videobody">
-      <video id="video3" bindplay="videoplay" bindpause="videopause"  controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}"  enable-play-gesture="{{true}}"  class="videobody" src="{{url3.vod}}"> </video>
+      <video id="video3" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url3.vod}}"> </video>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
+        <cover-image bindtap='fav4' id='{{url3.id}}' data-type="Y" wx:if="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav4' id='{{url3.id}}' data-type="N" wx:if="{{url3.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">1.8W{{}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">5000</cover-view>
+      </cover-view>
     </swiper-item>
   </swiper>
 </view>

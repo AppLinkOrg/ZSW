@@ -140,7 +140,7 @@ class Content extends AppBase {
  }
   dian(e){ 
       wx.navigateTo({
-        url: '/pages/video/video?id=' + e.currentTarget.id,
+        url: '/pages/video/video?id=' + e.currentTarget.id+'&member_id='+this.Base.getMyData().memberinfo.id,
      })
   }
 

@@ -75,6 +75,7 @@
           <view class='flex-3'></view>
           <image src='{{uploadpath}}resource/{{res.zhuanfa}}' class='icon-40 ' bindtap='fen'></image>
         </view>
+        
         <view class='flex-row flex-center margin-right-30'>
           <view class='flex-3'></view>
           <view class='txt-white'>{{item.fenxiang}}</view>
@@ -113,6 +114,9 @@
     <view class='flex-1'></view>
   </view>
 </view>
+
+
+
 <!-- <button open-type='share'  class='clear-button'></button>  -->
 <!-- <view class='flex-row flex-center margin-right-20'>
   <view class='flex-1'></view>

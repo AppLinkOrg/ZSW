@@ -34,13 +34,13 @@
       <label class=" ">
 
         <view class=''>
-          <button class='clear-button bg-green' open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='width:100%;height:60rpx;'>
+          <button class='clear-button  ' open-type="getUserInfo" bindgetuserinfo="getUserInfo" style='width:100%;height:60rpx;'>
             <checkbox value="" readonly checked="{{isgrantuser==true}}" color='#4C556E' style='margin-right:25rpx' />获得你的公开信息（昵称、头像等）
           </button>
         </view>
 
         <view class='margin-top-10 '> 
-          <button class='clear-button bg-green' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" style='width:100%;height:60rpx;'>
+          <button class='clear-button  ' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNo" style='width:100%;height:60rpx;'>
             <checkbox readonly value="" checked="{{isgrantphonenumber==true}}" color='#4C556E' style='margin-right:25rpx' />获得你的手机号码
           </button>
         </view>

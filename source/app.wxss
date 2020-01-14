@@ -33,6 +33,21 @@ page{
   align-content: center;
   flex-direction:column;
 }
+.chaochu {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chaochu2 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .btn-primary-line{
   border-color: #2699EC;
   color: #2699EC;

@@ -37,22 +37,30 @@ class Content extends AppBase {
   onLoad(options) {
     this.Base.Page = this;
     super.onLoad(options);
+     
+    this.videos();
 
-    var iknow=wx.getStorageSync("iknowvideotips");
+  }
+
+  videos(){
+    console.log('辣椒面',this.Base.getMyData().memberinfo)
     
-    if(iknow==""){
-      
+    var iknow = wx.getStorageSync("iknowvideotips");
+
+    if (iknow == "") { 
       this.Base.setMyData({
         show: 1,
       });
     }
     var memberapi = new MemberApi();
     memberapi.video({
-      firstid:options.id,
+      firstid: this.Base.options.id,
+       
       vodstatus: "A"
     }, (videolist) => {
+      console.log(videolist,'列表')
       for (var i = 0; i < videolist.length; i++) {
-        videolist[i].idx = i;
+        videolist[i].idx = i; 
       }
       this.Base.videolist = videolist;
       this.Base.setMyData({
@@ -61,7 +69,8 @@ class Content extends AppBase {
         url2: videolist[2],
         url3: videolist[videolist.length - 1],
         current: this.Base.current,
-        videolength:videolist.length
+        videolength: videolist.length,
+        vdolist: videolist
       });
       if (iknow != "") {
         if (this.Base.video0 != null) {
@@ -76,7 +85,6 @@ class Content extends AppBase {
         }
       }
     });
-
   }
 
   onMyShow() {
@@ -174,7 +182,7 @@ class Content extends AppBase {
   }
   videoplay(e) {
     var id = e.currentTarget.id;
-    console.log(id + " video  played");
+    console.log(id + " video  played aa");
   }
   videopause(e) {
     var id = e.currentTarget.id;
@@ -209,7 +217,12 @@ class Content extends AppBase {
         if (tmX < 0) {
           console.log("左滑=====");
           var video = this.Base.videolist[this.Base.current];
-          this.Base.info("右滑查看攻略:" + video.jianjie)
+          console.log(this.Base.videolist[this.Base.current],'----', this.Base.videolist, '----',this.Base.current)
+          wx.navigateTo({
+            url: '/pages/xiangqin/xiangqin?id=' + video.id,
+          })
+
+          //this.Base.info("右滑查看攻略:" + video.jianjie)
         } else {
           console.log("右滑=====");
           this.Base.backPage();
@@ -245,6 +258,84 @@ class Content extends AppBase {
       },500);
     }
   }
+
+
+  fav(e) {
+    var that = this;
+    var url0 = this.Base.getMyData().url0;
+    var id = e.currentTarget.id;
+    var status = e.currentTarget.dataset.type;
+    console.log('let me look',url0,'let me look')
+    // return;
+    var memberapi = new MemberApi();
+    memberapi.shoucang({
+      video_id: id,
+      status: status
+    }, (ret) => {
+      url0.isfav = status;
+      this.Base.setMyData({ url0 })
+    }); 
+  }
+  fav2(e) {
+    var that = this;
+    var url1 = this.Base.getMyData().url1;
+    var id = e.currentTarget.id;
+    var status = e.currentTarget.dataset.type;
+    console.log('let me look', url1, 'let me look')
+    // return;
+    var memberapi = new MemberApi();
+    memberapi.shoucang({
+      video_id: id,
+      status: status
+    }, (ret) => {
+      url1.isfav = status;
+      this.Base.setMyData({ url1 })
+    });
+
+
+  }
+  fav3(e) {
+    var that = this;
+    var url2 = this.Base.getMyData().url2;
+    var id = e.currentTarget.id;
+    var status = e.currentTarget.dataset.type;
+    console.log('let me look', url2, 'let me look')
+    // return;
+    var memberapi = new MemberApi();
+    memberapi.shoucang({
+      video_id: id,
+      status: status
+    }, (ret) => {
+      url2.isfav = status;
+      this.Base.setMyData({ url2 })
+    });
+ 
+  }
+  fav4(e) {
+    var that = this;
+    var url3 = this.Base.getMyData().url3;
+    var id = e.currentTarget.id;
+    var status = e.currentTarget.dataset.type;
+    console.log('let me look', url3, 'let me look')
+    // return;
+    var memberapi = new MemberApi();
+    memberapi.shoucang({
+      video_id: id,
+      status: status
+    }, (ret) => {
+      url3.isfav = status;
+      this.Base.setMyData({ url3 })
+    });
+
+
+  }
+
+  addcount(e){
+
+  }
+
+
+
 }
 
 var content = new Content();
@@ -257,6 +348,12 @@ body.calc = content.calc;
 body.videoplay = content.videoplay;
 body.videopause = content.videopause;
 body.touchStart = content.touchStart; 
-body.touchEnd = content.touchEnd;
-body.iknow = content.iknow;
+body.touchEnd = content.touchEnd; 
+body.fav = content.fav;
+body.fav2 = content.fav2;
+body.fav3 = content.fav3;
+body.fav4 = content.fav4; 
+body.addcount = content.addcount; 
+body.iknow = content.iknow; 
+body.videos = content.videos;
 Page(body)

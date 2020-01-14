@@ -52,8 +52,9 @@ class Content extends AppBase {
 
   detail(){
     console.log(AppBase.UserInfo,'ppp'); 
-      wx.navigateBack({ 
-      }) 
+      wx.navigateBack({
+
+      })
   }
 
   

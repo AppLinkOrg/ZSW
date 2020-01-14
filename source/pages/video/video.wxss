@@ -12,3 +12,16 @@
   background: rgba(0, 0, 0, 1);
   opacity: 0.8;
 }
+.right_block{
+  position: absolute;
+  z-index: 999;
+  /* background: white; */
+  right: 20rpx;
+  top: 40%;
+   
+  /* height: 200rpx; */
+}
+.heart{
+  width: 80rpx;
+  height: 80rpx;
+}
