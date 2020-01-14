@@ -36,7 +36,7 @@
 
     <swiper-item class="videobody">
 
-      <video id="video0" data-id='{{url0.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
+      <video show-play-btn='{{false}}' id="video0" data-id='{{url0.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url0.vod}}"> </video>
 
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
@@ -50,7 +50,7 @@
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video id="video1" data-id='{{url1.id}}'  data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
+      <video show-play-btn='{{false}}' id="video1" data-id='{{url1.id}}'  data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url1.vod}}"> </video>
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav2' id='{{url1.id}}' data-type="Y" wx:if="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
@@ -62,7 +62,7 @@
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video id="video2" data-id='{{url2.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
+      <video show-play-btn='{{false}}' id="video2" data-id='{{url2.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url2.vod}}"> </video>
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav3' id='{{url2.id}}' data-type="Y" wx:if="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
@@ -74,7 +74,7 @@
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video id="video3" data-id='{{url3.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url3.vod}}"> </video>
+      <video show-play-btn='{{false}}' id="video3" data-id='{{url3.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}" class="videobody" src="{{url3.vod}}"> </video>
       <cover-view class="right_block flex-row flex-column">
         <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
         <cover-image bindtap='fav4' id='{{url3.id}}' data-type="Y" wx:if="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>

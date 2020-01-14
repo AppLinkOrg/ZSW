@@ -41,7 +41,7 @@
         <image src='{{uploadpath}}video/{{item.touxiang}}' class='icon radius-50'></image>
         <view class='h6 margin-left-10'>{{item.name}}</view>
         <view class='flex-1'></view>
-        <view class='h6 txt-hui'>{{item.fenxiang}}播放</view>
+        <view class='h6 txt-hui'>{{item.play}}播放</view>
       </view>
 
     </view>

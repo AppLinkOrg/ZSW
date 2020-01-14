@@ -1,6 +1,9 @@
 import { AppBase } from "../../appbase";
 import { ApiConfig } from "../../apis/apiconfig";
 import { InstApi } from "../../apis/inst.api.js";
+import {
+  MemberApi
+} from "../../apis/member.api.js";
 
 class Content extends AppBase {
   constructor() {
@@ -20,6 +23,12 @@ class Content extends AppBase {
 
   onMyShow() {
     var that = this;
+    var memberapi = new MemberApi();
+    memberapi.liulanlist({
+
+    }, (liulanlist) => {
+      this.Base.setMyData({ liulanlist })
+    });
   }
   hui() {
 
@@ -28,11 +37,17 @@ class Content extends AppBase {
     })
 
   }
+  tovideo(e) {
+    var id = e.currentTarget.id;
+    wx.navigateTo({
+      url: '/pages/video/video?id=' + id,
+    })
+  }
 }
 var content = new Content();
 var body = content.generateBodyJson();
 body.onLoad = content.onLoad;
 body.onMyShow = content.onMyShow;
-
-body.hui = content.hui;
+body.tovideo = content.tovideo; 
+body.hui = content.hui; 
 Page(body)

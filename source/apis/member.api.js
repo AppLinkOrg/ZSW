@@ -73,6 +73,38 @@ export class MemberApi{
         })
     }
 
+    addliulang(json, callback, showLoading = true) {
+
+        if (showLoading)
+            ApiConfig.ShowLoading();
+
+        var header = ApiConfig.GetHeader();
+        console.log(header);
+        console.log(json);
+        wx.request({
+            url: ApiConfig.GetApiUrl() + 'member/addliulang',
+            data: json,
+            method: 'POST',
+            dataType: 'json',
+            header: header,
+            success: function (res) {
+                if (callback != null) {
+                    callback(res.data);
+                }
+            },
+            fail: function (res) {
+                console.log(res);
+                callback(false);
+            },
+            complete: function (res) {
+                console.log(res);
+            
+                if (showLoading)
+                    ApiConfig.CloseLoading();
+            }
+        })
+    }
+
     addshoucang(json, callback, showLoading = true) {
 
         if (showLoading)
@@ -585,7 +617,7 @@ export class MemberApi{
         })
     }
 
-    addliulang(json, callback, showLoading = true) {
+    liulanlist(json, callback, showLoading = true) {
 
         if (showLoading)
             ApiConfig.ShowLoading();
@@ -594,7 +626,7 @@ export class MemberApi{
         console.log(header);
         console.log(json);
         wx.request({
-            url: ApiConfig.GetApiUrl() + 'member/addliulang',
+            url: ApiConfig.GetApiUrl() + 'member/liulanlist',
             data: json,
             method: 'POST',
             dataType: 'json',

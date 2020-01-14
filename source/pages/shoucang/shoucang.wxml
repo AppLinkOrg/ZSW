@@ -27,7 +27,7 @@
       <view class='txt-gray f-26'>#生活#</view>
       <view class='flex-1'></view>
       <image src='{{uploadpath}}resource/{{res.zan}}' style='width:28rpx;height:26rpx' mode="{{item.widthFix}}"></image>
-      <view class='txt-gray f-26 margin-left-10'>1254</view>
+      <view class='txt-gray f-26 margin-left-10'>{{item.count}}</view>
     </view>
   </view>
 </view>
