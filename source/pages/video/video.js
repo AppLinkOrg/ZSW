@@ -11,6 +11,9 @@ import {
 import {
   MemberApi
 } from "../../apis/member.api.js";
+import {
+  PostApi
+} from "../../apis/post.api.js";
 
 class Content extends AppBase {
   constructor() {
@@ -94,6 +97,8 @@ class Content extends AppBase {
     }else{
       this.Base.setMyData({ lockup: false })
     }
+    var api = new PostApi();
+    api.poster({ id: this.Base.options.readid });
   }
 
   last = 0;
@@ -331,8 +336,14 @@ class Content extends AppBase {
   }
 
   addcount(e){
+    console.log(e);
+    var that = this;
+    var url = 'https://cmsdev.app-link.org/Users/alucard263096/zhaoshuiwan/upload/video/' + e.currentTarget.id + '_video3.png';
 
-  }
+    that.Base.viewPhoto({ currentTarget: { id: url } });
+
+    return;
+  } 
 
 
 

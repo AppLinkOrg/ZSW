@@ -43,7 +43,7 @@
         <cover-image bindtap='fav' id='{{url0.id}}' data-type="Y" wx:if="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
         <cover-image bindtap='fav' id='{{url0.id}}' data-type="N" wx:if="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
         <cover-view class="txt-white h5 margin-top-10">1.8W{{}}</cover-view>
-        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" class="icon-40 margin-top"></cover-image>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id='{{url0.id}}' class="icon-40 margin-top"></cover-image>
         <cover-view class="txt-white h5 margin-top-10">5000</cover-view>
       </cover-view>
 
