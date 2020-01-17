@@ -2,6 +2,7 @@
 .videobody{
   width:100vw;
   height: 100vh;
+  position: relative;
 }
 
 .ceng {
@@ -14,11 +15,25 @@
 }
 .right_block{
   position: absolute;
-  z-index: 999;
+  z-index: 9;
   /* background: white; */
   right: 20rpx;
   top: 40%;
-   
+  background: transparent;
+  
+  /* height: 200rpx; */
+}
+.margin-top-97{
+  margin-top: 114rpx;
+}
+.under_block{
+  position: absolute;
+  z-index: 9;
+  /* background: white; */
+  left: 40rpx;
+  bottom: 7%;
+  padding-right: 20rpx;
+   background: transparent;
   /* height: 200rpx; */
 }
 .heart{

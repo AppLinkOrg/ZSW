@@ -40,9 +40,7 @@ class Content extends AppBase {
   onLoad(options) {
     this.Base.Page = this;
     super.onLoad(options);
-     
-    this.videos();
-
+      
   }
 
   videos(){
@@ -53,6 +51,10 @@ class Content extends AppBase {
     if (iknow == "") { 
       this.Base.setMyData({
         show: 1,
+      });
+    } if (iknow == "2"){
+      this.Base.setMyData({
+        show: 2,
       });
     }
     var memberapi = new MemberApi();
@@ -92,6 +94,17 @@ class Content extends AppBase {
 
   onMyShow() {
     var that = this;
+
+    var isrun = this.Base.getMyData().isrun;
+
+    if (isrun == true) {
+      return;
+    }
+
+    this.Base.setMyData({ isrun: true });
+
+    this.videos();
+
     if (this.Base.getMyData().memberinfo == null || this.Base.getMyData().memberinfo.nickName ==''){
       this.Base.setMyData({ lockup:true})
     }else{
@@ -187,21 +200,23 @@ class Content extends AppBase {
   }
   videoplay(e) {
     var id = e.currentTarget.dataset.id;
+    var city = e.currentTarget.dataset.city;
     var member_id = e.currentTarget.dataset.member_id;
     console.log(id, '路口監控', member_id);
   //return;
     var memberapi=new MemberApi();
     memberapi.addliulang({
-      video_id: id
-     
-    }, (addliulang)=>{
-
+      video_id: id 
+    }, (addliulang)=>{ 
     })
+    this.Base.setMyData({ city })
     console.log(id + " video  played aa");
+
     
   }
   videopause(e) {
     var id = e.currentTarget.id;
+    
     console.log(id + " video paused");
   }
 
@@ -222,6 +237,7 @@ class Content extends AppBase {
   }
   // 触摸结束事件
   touchEnd(e) {
+     
     let touchMoveX = e.changedTouches[0].pageX;
     let touchMoveY = e.changedTouches[0].pageY;
     let tmX = touchMoveX - this.Base.touchDotX;
@@ -233,7 +249,8 @@ class Content extends AppBase {
         if (tmX < 0) {
           console.log("左滑=====");
           var video = this.Base.videolist[this.Base.current];
-          console.log(this.Base.videolist[this.Base.current],'----', this.Base.videolist, '----',this.Base.current)
+          console.log(video.id)
+          
           wx.navigateTo({
             url: '/pages/xiangqin/xiangqin?id=' + video.id,
           })
@@ -289,6 +306,11 @@ class Content extends AppBase {
       status: status
     }, (ret) => {
       url0.isfav = status;
+      if(ret.code==0){
+        url0.count++
+      }else{
+        url0.count--
+      }
       this.Base.setMyData({ url0 })
     }); 
   }
@@ -305,6 +327,11 @@ class Content extends AppBase {
       status: status
     }, (ret) => {
       url1.isfav = status;
+      if (ret.code == 0) {
+        url1.count++
+      } else {
+        url1.count--
+      }
       this.Base.setMyData({ url1 })
     });
 
@@ -323,6 +350,11 @@ class Content extends AppBase {
       status: status
     }, (ret) => {
       url2.isfav = status;
+      if (ret.code == 0) {
+        url2.count++
+      } else {
+        url2.count--
+      }
       this.Base.setMyData({ url2 })
     });
  
@@ -340,6 +372,11 @@ class Content extends AppBase {
       status: status
     }, (ret) => {
       url3.isfav = status;
+      if (ret.code == 0) {
+        url3.count++
+      } else {
+        url3.count--
+      }
       this.Base.setMyData({ url3 })
     });
 

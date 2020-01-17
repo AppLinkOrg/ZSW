@@ -1,14 +1,14 @@
-<view class='cu-custom'>
-  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:#ffffff">
+<view class='cu-custom' >
+  <view class="cu-bar fixed " style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;background:transparent">
     <view class='action' open-type="navigateBack" delta="1" hover-class="none">
-      <image class="asd" src="{{uploadpath}}resource/{{res.fanhui}}" bindtap='hui'></image>
-      <text style="color:black;margin-left:8rpx" bindtap='xiala' class='h5'>播放视频</text>
+      <image class="asd" src="{{uploadpath}}resource/{{res.backwhite}}" bindtap='hui'></image>
+      <view style="color:white;margin-left:8rpx" bindtap='xiala' class='h5' bindtap='hui'>播放视频</view>
     </view>
-    <view class='content' style='top:{{StatusBar}}px;color:black'>视频详情</view>
+    <view class='content txt-bold' style='top:{{StatusBar}}px;color:white'>视频详情</view>
   </view>
 </view>
 
-<view style="height:{{CustomBar}}px;"></view>
+<!-- <view style="height:{{CustomBar}}px;"></view> -->
 
 <!-- 一 -->
 

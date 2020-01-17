@@ -8,6 +8,7 @@
     <view class='content txt-bold' style='top:{{StatusBar}}px;color:black'>{{instinfo.name}}</view>
   </view>
 </view>
+
 <view class='zhe' wx:if='{{show==0}}'></view>
 
 <view style="height:{{CustomBar}}px;"></view>

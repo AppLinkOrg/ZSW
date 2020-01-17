@@ -6,7 +6,8 @@
   position:fixed;
    bottom:0;
   width:100vw;
-  height:98rpx;
-   line-height: 98rpx;
+  height:110rpx;
+   line-height: 110rpx;
+  
   box-shadow:0cm 0 21rpx 0 rgba(0, 0, 0, 0.08);
 }
