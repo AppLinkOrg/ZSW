@@ -50,100 +50,100 @@
         class="videobody" src="{{url0.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
       </video>
 
-      <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></image>
-        <image catchtap='fav' id='{{url0.id}}' data-type="Y" hidden="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image catchtap='fav' id='{{url0.id}}' data-type="N" hidden="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5 margin-top-10">{{url0.count}}</view>
-        <image src="{{uploadpath}}resource/{{res.zhuanfa}}" catchtap="addcount" id="{{url0.id}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5 margin-top-10">{{url0.fenxiang}}</view>
-      </view>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></cover-image>
+        <cover-image catchtap='fav' id='{{url0.id}}' data-type="Y" hidden="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image catchtap='fav' id='{{url0.id}}' data-type="N" hidden="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5 margin-top-10">{{url0.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" catchtap="addcount" id="{{url0.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5 margin-top-10">{{url0.fenxiang}}</cover-view>
+      </cover-view>
 
-      <view class="under_block">
-        <view class="flex-row flex-bottom">
-          <view class="txt-white ">@{{url0.name}}</view>
-          <image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
-          <view class="txt-white h5 margin-left-5">{{url0.city_name}}</view>
-        </view>
+      <cover-view class="under_block">
+        <cover-view class="flex-row flex-bottom">
+          <cover-view class="txt-white ">@{{url0.name}}</cover-view>
+          <cover-image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></cover-image>
+          <cover-view class="txt-white h5 margin-left-5">{{url0.city_name}}</cover-view>
+        </cover-view>
 
-        <view class="   margin-top-10">
-          <view class="txt-white h5" wx:for='{{url0.departmentlist}}' wx:key='s'>#{{item.name}}#</view>
-          <view class="txt-white h5 ">{{url0.jianjie}}</view>
-        </view>
-      </view>
+        <cover-view class="   margin-top-10">
+          <cover-view class="txt-white h5" wx:for='{{url0.departmentlist}}' wx:key='s'>#{{item.name}}#</cover-view>
+          <cover-view class="txt-white h5 ">{{url0.jianjie}}</cover-view>
+        </cover-view>
+      </cover-view>
 
     </swiper-item>
 
     <swiper-item class="videobody">
       <video show-play-btn='{{false}}' data-city="{{url1.city_name}}" id="video1" data-id='{{url1.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
         class="videobody" src="{{url1.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> </video>
-      <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url1.touxiang}}"></image>
-        <image bindtap='fav2' id='{{url1.id}}' data-type="Y" hidden="{{url1.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image bindtap='fav2' id='{{url1.id}}' data-type="N" hidden="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5">{{url1.count}}</view>
-        <image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url1.id}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5">{{url1.fenxiang}}</view>
-      </view>
-      <view class="under_block">
-        <view class="flex-row flex-bottom">
-          <view class="txt-white ">@{{url1.name}}</view>
-          <image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
-          <view class="txt-white h5 margin-left-5">{{url1.city_name}}</view>
-        </view>
-        <view class="  margin-top-10">
-          <view class="txt-white h5" wx:for='{{url1.departmentlist}}' wx:key='s'>#{{item.name}}#</view>
-          <view class="txt-white h5 ">{{url1.jianjie}}</view>
-        </view>
-      </view>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url1.touxiang}}"></cover-image>
+        <cover-image bindtap='fav2' id='{{url1.id}}' data-type="Y" hidden="{{url1.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav2' id='{{url1.id}}' data-type="N" hidden="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url1.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url1.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url1.fenxiang}}</cover-view>
+      </cover-view>
+      <cover-view class="under_block">
+        <cover-view class="flex-row flex-bottom">
+          <cover-view class="txt-white ">@{{url1.name}}</cover-view>
+          <cover-image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></cover-image>
+          <cover-view class="txt-white h5 margin-left-5">{{url1.city_name}}</cover-view>
+        </cover-view>
+        <cover-view class="  margin-top-10">
+          <cover-view class="txt-white h5" wx:for='{{url1.departmentlist}}' wx:key='s'>#{{item.name}}#</cover-view>
+          <cover-view class="txt-white h5 ">{{url1.jianjie}}</cover-view>
+        </cover-view>
+      </cover-view>
     </swiper-item>
 
     <swiper-item class="videobody">
       <video show-play-btn='{{false}}' data-city="{{url2.city_name}}" id="video2" data-id='{{url2.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
         class="videobody" src="{{url2.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> </video>
-      <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url2.touxiang}}"></image>
-        <image bindtap='fav3' id='{{url2.id}}' data-type="Y" hidden="{{url2.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image bindtap='fav3' id='{{url2.id}}' data-type="N" hidden="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5">{{url2.count}}</view>
-        <image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url2.id}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5">{{url2.fenxiang}}</view>
-      </view>
-      <view class="under_block">
-        <view class="flex-row flex-bottom">
-          <view class="txt-white ">@{{url2.name}}</view>
-          <image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
-          <view class="txt-white h5 margin-left-5">{{url2.city_name}}</view>
-        </view>
-        <view class="  margin-top-10">
-          <view class="txt-white h5" wx:for='{{url2.departmentlist}}' wx:key='s'>#{{item.name}}#</view>
-          <view class="txt-white h5 ">{{url2.jianjie}}</view>
-        </view>
-      </view>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url2.touxiang}}"></cover-image>
+        <cover-image bindtap='fav3' id='{{url2.id}}' data-type="Y" hidden="{{url2.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav3' id='{{url2.id}}' data-type="N" hidden="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url2.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url2.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url2.fenxiang}}</cover-view>
+      </cover-view>
+      <cover-view class="under_block">
+        <cover-view class="flex-row flex-bottom">
+          <cover-view class="txt-white ">@{{url2.name}}</cover-view>
+          <cover-image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></cover-image>
+          <cover-view class="txt-white h5 margin-left-5">{{url2.city_name}}</cover-view>
+        </cover-view>
+        <cover-view class="  margin-top-10">
+          <cover-view class="txt-white h5" wx:for='{{url2.departmentlist}}' wx:key='s'>#{{item.name}}#</cover-view>
+          <cover-view class="txt-white h5 ">{{url2.jianjie}}</cover-view>
+        </cover-view>
+      </cover-view>
     </swiper-item>
 
     <swiper-item class="videobody">
       <video show-play-btn='{{false}}' data-city="{{url3.city_name}}" id="video3" data-id='{{url3.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
         class="videobody" src="{{url3.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> </video>
-      <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url3.touxiang}}"></image>
-        <image bindtap='fav4' id='{{url3.id}}' data-type="Y" hidden="{{url3.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image bindtap='fav4' id='{{url3.id}}' data-type="N" hidden="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5">{{url3.count}}</view>
-        <image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url3.id}}" class="icon-40 margin-top"></image>
-        <view class="txt-white h5">{{url3.fenxiang}}</view>
-      </view>
-      <view class="under_block">
-        <view class="flex-row flex-bottom">
-          <view class="txt-white ">@{{url3.name}}</view>
-          <image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></image>
-          <view class="txt-white h5 margin-left-5">{{url3.city_name}}</view>
-        </view>
-        <view class=" margin-top-10">
-          <view class="txt-white h5" wx:for='{{url3.departmentlist}}' wx:key='s'>#{{item.name}}#</view>
-          <view class="txt-white h5 ">{{url3.jianjie}}</view>
-        </view>
-      </view>
+      <cover-view class="right_block flex-row flex-column">
+        <cover-image class="icon-50 radius-50" src="{{uploadpath}}video/{{url3.touxiang}}"></cover-image>
+        <cover-image bindtap='fav4' id='{{url3.id}}' data-type="Y" hidden="{{url3.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></cover-image>
+        <cover-image bindtap='fav4' id='{{url3.id}}' data-type="N" hidden="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url3.count}}</cover-view>
+        <cover-image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url3.id}}" class="icon-40 margin-top"></cover-image>
+        <cover-view class="txt-white h5">{{url3.fenxiang}}</cover-view>
+      </cover-view>
+      <cover-view class="under_block">
+        <cover-view class="flex-row flex-bottom">
+          <cover-view class="txt-white ">@{{url3.name}}</cover-view>
+          <cover-image class="icon-20 margin-left-20" src="{{uploadpath}}resource/{{res.weizhi}}"></cover-image>
+          <cover-view class="txt-white h5 margin-left-5">{{url3.city_name}}</cover-view>
+        </cover-view>
+        <cover-view class=" margin-top-10">
+          <cover-view class="txt-white h5" wx:for='{{url3.departmentlist}}' wx:key='s'>#{{item.name}}#</cover-view>
+          <cover-view class="txt-white h5 ">{{url3.jianjie}}</cover-view>
+        </cover-view>
+      </cover-view>
     </swiper-item>
 
   </swiper>
