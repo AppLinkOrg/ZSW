@@ -52,8 +52,8 @@
 
       <view class="right_block flex-row flex-column">
         <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></image>
-        <image catchtap='fav' id='{{url0.id}}' data-type="Y" wx:if="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image catchtap='fav' id='{{url0.id}}' data-type="N" wx:if="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
+        <image catchtap='fav' id='{{url0.id}}' data-type="Y" hidden="{{url0.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
+        <image catchtap='fav' id='{{url0.id}}' data-type="N" hidden="{{url0.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5 margin-top-10">{{url0.count}}</view>
         <image src="{{uploadpath}}resource/{{res.zhuanfa}}" catchtap="addcount" id="{{url0.id}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5 margin-top-10">{{url0.fenxiang}}</view>
@@ -75,12 +75,12 @@
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video show-play-btn='{{false}}' data-city="{{url0.city_name}}" id="video1" data-id='{{url1.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
+      <video show-play-btn='{{false}}' data-city="{{url1.city_name}}" id="video1" data-id='{{url1.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
         class="videobody" src="{{url1.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> </video>
       <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></image>
-        <image bindtap='fav2' id='{{url1.id}}' data-type="Y" wx:if="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image bindtap='fav2' id='{{url1.id}}' data-type="N" wx:if="{{url1.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
+        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url1.touxiang}}"></image>
+        <image bindtap='fav2' id='{{url1.id}}' data-type="Y" hidden="{{url1.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
+        <image bindtap='fav2' id='{{url1.id}}' data-type="N" hidden="{{url1.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5">{{url1.count}}</view>
         <image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url1.id}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5">{{url1.fenxiang}}</view>
@@ -99,12 +99,12 @@
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video show-play-btn='{{false}}' data-city="{{url0.city_name}}" id="video2" data-id='{{url2.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
+      <video show-play-btn='{{false}}' data-city="{{url2.city_name}}" id="video2" data-id='{{url2.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
         class="videobody" src="{{url2.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> </video>
       <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></image>
-        <image bindtap='fav3' id='{{url2.id}}' data-type="Y" wx:if="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image bindtap='fav3' id='{{url2.id}}' data-type="N" wx:if="{{url2.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
+        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url2.touxiang}}"></image>
+        <image bindtap='fav3' id='{{url2.id}}' data-type="Y" hidden="{{url2.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
+        <image bindtap='fav3' id='{{url2.id}}' data-type="N" hidden="{{url2.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5">{{url2.count}}</view>
         <image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url2.id}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5">{{url2.fenxiang}}</view>
@@ -123,12 +123,12 @@
     </swiper-item>
 
     <swiper-item class="videobody">
-      <video show-play-btn='{{false}}' data-city="{{url0.city_name}}" id="video3" data-id='{{url3.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
+      <video show-play-btn='{{false}}' data-city="{{url3.city_name}}" id="video3" data-id='{{url3.id}}' data-member_id="{{memberinfo.id}}" bindplay="videoplay" bindpause="videopause" controls="{{false}}" loop="{{true}}" enable-progress-gesture="{{false}}" enable-play-gesture="{{true}}"
         class="videobody" src="{{url3.vod}}" bindtouchstart="touchStart" bindtouchend="touchEnd"> </video>
       <view class="right_block flex-row flex-column">
-        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url0.touxiang}}"></image>
-        <image bindtap='fav4' id='{{url3.id}}' data-type="Y" wx:if="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
-        <image bindtap='fav4' id='{{url3.id}}' data-type="N" wx:if="{{url3.isfav!='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
+        <image class="icon-50 radius-50" src="{{uploadpath}}video/{{url3.touxiang}}"></image>
+        <image bindtap='fav4' id='{{url3.id}}' data-type="Y" hidden="{{url3.isfav!='N'}}" src="{{uploadpath}}resource/{{res.dianzan}}" class="icon-40 margin-top"></image>
+        <image bindtap='fav4' id='{{url3.id}}' data-type="N" hidden="{{url3.isfav=='N'}}" src="{{uploadpath}}resource/{{res.zan}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5">{{url3.count}}</view>
         <image src="{{uploadpath}}resource/{{res.zhuanfa}}" bindtap="addcount" id="{{url3.id}}" class="icon-40 margin-top"></image>
         <view class="txt-white h5">{{url3.fenxiang}}</view>
