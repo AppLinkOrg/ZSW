@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/fenlei/fenlei",
     "pages/video/video",
     "pages/home/home",
-    "pages/fenlei/fenlei",
     "pages/auth/auth",
     "pages/shipin/shipin",
     "pages/guan/guan",
